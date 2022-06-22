@@ -1,0 +1,41 @@
+body.login.login-designer-template-04 {
+  display: flex;
+  content: " ";
+  height: 100%;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: flex-end;
+}
+body.login.login-designer-template-04 #login {
+  border: 0;
+}
+@media only screen and (min-width: 400px) {
+  body.login.login-designer-template-04 #login {
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 50%;
+    margin: 0;
+    padding: 40px 0 0;
+  }
+}
+@media only screen and (min-width: 800px) {
+  body.login.login-designer-template-04 #login {
+    padding: 100px 0 0;
+  }
+}
+@media only screen and (max-width: 399px) {
+  body.login.login-designer-template-04 #login {
+    width: 90%;
+  }
+}
+body.login.login-designer-template-04 form {
+  border: 0;
+  max-width: 400px;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 499px) {
+  body.login.login-designer-template-04 form {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}/*# sourceMappingURL=login-designer-template-04.css.map */

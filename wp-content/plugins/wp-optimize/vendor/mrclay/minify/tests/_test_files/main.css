@@ -1,0 +1,23 @@
+/*! preserving comment */
+.my-element {
+  color: hotpink;
+  width: 100%;
+  overflow: hidden;
+}
+
+.my-other-element {
+  border-radius: 6px;
+}
+
+/* import include -> */
+/* lesstest2.scss */
+a.included {
+  color: hotpink;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+/* <- import included */
+/*
+ a normal comment.
+*//*# sourceMappingURL=main.css.map */
