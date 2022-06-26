@@ -1,0 +1,197 @@
+.depoimentos-linhas {
+  position: relative;
+  font-family: "Montserrat", Sans-serif;
+  transition: all 0.5s ease;
+}
+.depoimentos-linhas .depoimentos-linha {
+  width: 680px;
+  min-height: 390px;
+  transition: all 0.5s ease;
+}
+.depoimentos-linhas .depoimentos-linha blockquote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  transition: width 1s;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 50px;
+  box-shadow: 0px 3px 23px rgba(0, 0, 0, 0.1215686275);
+  height: 100%;
+  min-height: 390px;
+}
+.depoimentos-linhas .depoimentos-linha blockquote cite {
+  font-size: 20;
+  line-height: 1.3em;
+  font-weight: bold;
+  text-align: center;
+  color: #638796;
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.depoimentos-linhas .depoimentos-linha blockquote p {
+  font-size: 1.0416666667vw;
+  line-height: 1.3em;
+  font-weight: 400;
+  color: #707070;
+  margin-bottom: 20px;
+}
+.depoimentos-linhas .depoimentos-linha blockquote .estrelas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.depoimentos-linhas .depoimentos-linha blockquote .estrelas img {
+  margin: 0 3px;
+}
+.depoimentos-linhas .slick-snext,
+.depoimentos-linhas .slick-sprev {
+  display: block;
+  opacity: 0.5 !important;
+}
+.depoimentos-linhas .slick-current {
+  opacity: 1;
+  position: relative;
+  display: block;
+  transform: translate3d(0, 0, 0);
+  z-index: 2;
+  opacity: 1 !important;
+}
+.depoimentos-linhas .slick-snext {
+  opacity: 1;
+  transform: translate3d(20%, 0, -20px);
+  z-index: 1;
+}
+.depoimentos-linhas .slick-sprev {
+  opacity: 1;
+  transform: translate3d(-20%, 0, -20px);
+}
+.depoimentos-linhas .arrow-left, .depoimentos-linhas .arrow-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 73px;
+  height: 73px;
+  border-radius: 100%;
+  transition: all 0.5s ease;
+  background-image: linear-gradient(to right, #32444B 0%, #638796 51%, #638796 100%);
+  flex: 1 1 auto;
+  background-size: 200% auto;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9;
+  border: unset;
+  background-color: transparent;
+}
+.depoimentos-linhas .arrow-left:hover, .depoimentos-linhas .arrow-right:hover {
+  background-position: 50% center;
+}
+.depoimentos-linhas .arrow-left:focus, .depoimentos-linhas .arrow-left:active, .depoimentos-linhas .arrow-right:focus, .depoimentos-linhas .arrow-right:active {
+  background-position: 100% center;
+}
+.depoimentos-linhas .arrow-left img, .depoimentos-linhas .arrow-right img {
+  display: block;
+  width: 22.5px;
+  height: 22.5px;
+}
+.depoimentos-linhas .arrow-left {
+  left: 12%;
+}
+.depoimentos-linhas .arrow-right {
+  right: 12%;
+}
+.depoimentos-linhas .slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 5%;
+}
+.depoimentos-linhas .slick-dots li {
+  width: 12px;
+  height: 12px;
+  border: 1px solid #2D3643;
+  background-color: transparent;
+  transition: all 0.5s ease;
+  border-radius: 100%;
+}
+.depoimentos-linhas .slick-dots .slick-active {
+  width: 16px;
+  height: 16px;
+  background-color: #2D3643;
+}
+
+.slick-slider {
+  margin-left: -12%;
+  margin-right: -12%;
+}
+
+.slick-list {
+  padding-top: 10% !important;
+  padding-bottom: 10% !important;
+  padding-left: 15% !important;
+  padding-right: 15% !important;
+}
+
+.slick-track {
+  max-width: 100% !important;
+  transform: translate3d(0, 0, 0) !important;
+  perspective: 100px;
+}
+
+.slick-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  opacity: 0;
+  width: 100% !important;
+  transform: translate3d(0, 0, 0);
+  transition: transform 1s, opacity 1s;
+}
+
+@media only screen and (max-width: 1025px) {
+  .depoimentos-linhas {
+    overflow-x: hidden;
+    width: 100vw;
+    margin-left: -5% !important;
+  }
+  .depoimentos-linhas .depoimentos-linha {
+    width: 100%;
+    min-height: auto;
+  }
+  .depoimentos-linhas .depoimentos-linha blockquote {
+    padding: 20px;
+    min-height: 100%;
+  }
+  .depoimentos-linhas .depoimentos-linha blockquote cite {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .depoimentos-linhas .depoimentos-linha blockquote p {
+    font-size: 14px;
+  }
+  .depoimentos-linhas .arrow-left, .depoimentos-linhas .arrow-right {
+    display: none !important;
+  }
+  .depoimentos-linhas .slick-dots {
+    bottom: 0;
+  }
+}
+@media only screen and (max-width: 769px) {
+  .depoimentos-linhas .depoimentos-linha blockquote {
+    padding: 14px;
+  }
+  .depoimentos-linhas .depoimentos-linha blockquote cite {
+    font-size: 14px;
+  }
+  .depoimentos-linhas .depoimentos-linha blockquote p {
+    font-size: 10px;
+  }
+}/*# sourceMappingURL=custom-depoimentos.css.map */

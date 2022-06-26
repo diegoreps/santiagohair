@@ -1,0 +1,170 @@
+@function vw($px){
+
+	$vp: calc(1920 / 100);
+    
+    @return ($px / $vp) * 1vw;
+}
+
+@function em($ft, $ln){
+
+	$ln_em: calc(1.0 * $ln);
+    
+    @return ($ln_em / $ft) * 1em;
+}
+
+.blog-slider{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 20px; 
+    font-family: "Montserrat", Sans-serif;
+    .blog-slider-post{
+        display: block;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.13);
+        border-radius: 15px;
+        .blog-slider-img{
+            display: block;
+            width: 100%;
+            border-top-left-radius: 13px;
+            border-top-right-radius: 13px;
+            img{
+                display: block;
+                width: 100%;
+                height: 201px;
+                border-top-left-radius: 13px;
+                border-top-right-radius: 13px;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+        .blog-slider-conteudo{
+            display: block;
+            width: 100%;
+            padding: 20px 25px 35px 25px;
+            h2{
+                font-size: vw(23);
+                line-height: em(23, 25);
+                color: #2D3643;
+                font-weight: bold;
+                text-align: left;
+                margin-bottom: 20px;
+                transition: all 0.5s ease;
+                &:hover{
+                    color: #638796;
+                }
+            }
+            p{
+                font-size: vw(15);
+                line-height: em(15, 19);
+                color: #707070;
+                font-weight: 400;
+                text-align: left;
+                margin-bottom: 35px;
+            }
+            a{
+                font-size: vw(20);
+                line-height: em(20, 24);
+                font-weight: bold;
+                color: #2D3643;
+                transition: all 0.5s ease;
+                img{
+                    width: vw(21);
+                    height: vw(21);
+                    vertical-align: middle;
+                    margin-left: vw(14);
+                    transition: all 0.5s ease;
+                }
+                &:hover{
+                    color: #638796;
+                    img{
+                        margin-left: vw(7);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .blog-slider{
+        display: block;
+        width: 357px;
+        max-width: 100%;
+        margin: 0 auto; 
+        .blog-slider-post{
+            margin-bottom: 20px;
+            .blog-slider-img{
+                img{
+                    height: 200px;
+                }
+            }
+            .blog-slider-conteudo{
+                padding: 30px 20px;
+                h2{
+                    font-size: 16px;
+                }
+                p{
+                    font-size: 14px;
+                    margin-bottom: 20px;
+                }
+                a{
+                    font-size: 14px;
+                    img{
+                        width: 15px;
+                        height: 15px;
+                        margin-left: 10px;
+                    }
+                    &:hover{
+                        img{
+                            margin-left: 5px;
+                        }
+                    }
+                }
+            }
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+
+}
+
+
+
+
+@media only screen and (max-width: 767px) {
+
+    .blog-slider{
+        width: 100%;
+        .blog-slider-post{
+            margin-bottom: 20px;
+            .blog-slider-img{
+                img{
+                    height: 150px;
+                }
+            }
+            .blog-slider-conteudo{
+                padding: 15px 10px;
+                h2{
+                    font-size: 14px;
+                    margin-bottom: 10px;
+                }
+                p{
+                    font-size: 10px;
+                    margin-bottom: 10px;
+                }
+                a{
+                    font-size: 14px;
+                    img{
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+}
