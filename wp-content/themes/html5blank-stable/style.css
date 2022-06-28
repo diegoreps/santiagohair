@@ -96,6 +96,17 @@ b, strong {
   margin-right: 5px;
 }
 
+.linha-esquerda-banner::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 2px;
+  background-color: #638796;
+  border-radius: 10px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
 #menu-pc {
   transition: all 0.5s ease;
   top: 0;
@@ -115,20 +126,25 @@ b, strong {
   display: none;
 }
 
+#menu-mobile {
+  transition: all 0.5s ease;
+  top: 0;
+  width: 100vw;
+}
+
 .sombra {
   box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.1215686275);
 }
 
-.gradient .elementor-button-link {
+.elementor-widget-button .elementor-button-link {
   transition: all 0.5s ease;
-  background-image: linear-gradient(to right, #32444B 0%, #638796 51%, #638796 100%);
   flex: 1 1 auto;
   background-size: 200% auto;
 }
-.gradient .elementor-button-link:hover {
+.elementor-widget-button .elementor-button-link:hover {
   background-position: 50% center;
 }
-.gradient .elementor-button-link:focus, .gradient .elementor-button-link:active {
+.elementor-widget-button .elementor-button-link:focus, .elementor-widget-button .elementor-button-link:active {
   background-position: 100% center;
 }
 
@@ -177,7 +193,7 @@ b, strong {
 
 .bold-verde strong, .bold-verde b {
   color: #638796;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 #faq .elementor-accordion-item {
@@ -222,6 +238,10 @@ b, strong {
 }
 
 @media only screen and (max-width: 1025px) {
+  ul.hfe-nav-menu {
+    box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.1215686275);
+  }
+
   .linha-esquerda p::before {
     width: 8px;
     height: 1.5px;

@@ -413,4 +413,141 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
     return '<h2>' . $content . '</h2>';
 }
 
+
+function create_post_type_tecnicas(){
+    register_post_type('tecnicas', 
+        array(
+        'labels' => array(
+            'name' => __('Sessão Técnicas', 'tecnicas'), 
+            'singular_name' => __('Técnica', 'tecnicas'),
+            'add_new' => __('Adicionar Item', 'tecnicas'),
+            'add_new_item' => __('Adicionar um novo Item', 'tecnicas'),
+            'edit' => __('Editar', 'tecnicas'),
+            'edit_item' => __('Editar Item', 'tecnicas'),
+            'new_item' => __('Novo Item em Branco', 'tecnicas'),
+            'view' => __('Visualizar Itens', 'tecnicas'),
+            'view_item' => __('Visualizar Itens', 'tecnicas'),
+            'search_items' => __('Procurar um Item', 'tecnicas'),
+            'not_found' => __('Nenhum Item encontrado', 'tecnicas'),
+            'not_found_in_trash' => __('Nenhum Item na lixeira', 'tecnicas')
+        ),
+        'public' => true,
+        'hierarchical' => true, 
+        'has_archive' => false,
+        'can_export' => true,
+        'supports' =>   array(  'title',
+                                'editor', 
+                                'thumbnail',
+                                'revisions'
+        ), 
+    ));
+}
+add_action('init', 'create_post_type_tecnicas');
+
+add_filter('get_sample_permalink_html', 'my_hide_permalinks_tecnicas', 10, 5);
+
+function my_hide_permalinks_tecnicas($return, $post_id, $new_title, $new_slug, $post)
+{
+    if($post->post_type == 'tecnicas') {
+        return '';
+    }
+    return $return;
+}
+
+function sessao_tecnicas($atts) {
+
+    $args = array(
+        'posts_per_page' => 5, 
+        'post_type' => "tecnicas",
+        'post_status' => 'publish',
+        'ignore_sticky_posts'	=> false,
+        'order' => 'DESC',
+        'orderby' => 'date',
+    );
+
+    $tecnicas = new WP_Query( $args );
+
+    if($tecnicas->found_posts > 0){
+        $i = 1;
+    ?>
+
+        <div class="sessao-tecnicas">
+
+            <div class="sessao-tecnicas-menu">
+
+                <?php while($tecnicas->have_posts()) : $tecnicas->the_post(); ?>
+
+                    <div id="tecnica-<?php the_ID(); ?>" class="sessao-tecnicas-menu-item <?php if($i == 1){ echo 'sessao-ativa'; } ?>">
+
+                        <div class="sessao-tecnicas-menu-item-icone">
+
+                            <img src="<?php echo the_field("icone", get_the_ID()); ?>" />
+
+                        </div>
+
+                        <div class="sessao-tecnicas-menu-item-titulo">
+
+                            <span><?php the_title(); ?><span>
+
+                        </div>
+
+                        <div class="sessao-tecnicas-menu-item-seta">
+
+                            <img src="<?php echo get_home_url() ?>/wp-content/uploads/2022/06/Icon-feather-arrow-down-circle.svg" />
+
+                        </div>
+
+                    </div>
+
+                <?php $i++; endwhile; ?>
+
+            </div>
+
+            <div class="sessao-tecnicas-itens">
+
+                <?php $i = 1; while($tecnicas->have_posts()) : $tecnicas->the_post(); ?>
+
+                    <div class="sessao-tecnicas-item tecnica-<?php the_ID(); ?> <?php if($i == 1){ echo 'sessao-ativa'; } ?>">
+
+                        <div class="sessao-tecnicas-item-conteudo">
+
+                            <div class="sessao-tecnicas-item-titulo">
+
+                                <h4><?php the_title(); ?></h4>
+
+                            </div>
+
+                            <div class="sessao-tecnicas-item-texto">
+
+                                <?php the_content(); ?>
+
+                            </div>
+
+                            <a href="<?php the_permalink(get_field("link_da_pagina", get_the_ID())) ?>">Conheça a técnica</a>
+
+                        </div>
+
+                        <div class="sessao-tecnicas-item-imagem">
+
+                            <?php the_post_thumbnail(); ?>
+
+                        </div>
+
+                    </div>
+
+                <?php $i++; endwhile; ?>
+
+            </div>
+
+    <?php
+    ?>
+
+    </div>
+
+    <?php
+    }
+
+}
+add_shortcode('shortcode_sessao_tecnicas', 'sessao_tecnicas');
+
 ?>

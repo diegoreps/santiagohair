@@ -22,7 +22,7 @@ jQuery(function () {
 			if (scroll2 > 0) {
 				jQuery("#menu-pc").css("box-shadow", " 0 0 30px 0 rgba(0,0,0,.2)");
 				jQuery("#menu-pc").css("position", "fixed");
-				jQuery('body').css('padding-top', jQuery('#menu-com-fundo').innerHeight());
+				jQuery('body').css('padding-top', jQuery('#menu-pc').innerHeight());
 			} else {
 				jQuery("#menu-pc").css("box-shadow", "unset");
 				jQuery("#menu-pc").css("position", "relative");

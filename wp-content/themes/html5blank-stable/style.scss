@@ -105,6 +105,19 @@ b, strong{
 	}
 }
 
+.linha-esquerda-banner{
+		&::before{
+			content: "";
+			display: inline-block;
+			width: 12px;
+			height: 2px;
+			background-color: #638796;
+			border-radius: 10px;
+			vertical-align: middle;
+			margin-right: 5px;
+		}
+}
+
 #menu-pc{
 	transition: all 0.5s ease;
 	top: 0;
@@ -128,14 +141,19 @@ b, strong{
 	}
 }
 
+#menu-mobile{
+	transition: all 0.5s ease;
+	top: 0;
+	width: 100vw;
+}
+
 .sombra{
 	box-shadow: 0px 1px 20px #0000001F;
 }
 
-.gradient{
+.elementor-widget-button{
 	.elementor-button-link{
 		transition: all 0.5s ease; 
-		background-image: linear-gradient(to right, #32444B 0%, #638796 51%, #638796 100%);
 		flex: 1 1 auto;
 		background-size: 200% auto;
 		&:hover{
@@ -198,7 +216,7 @@ b, strong{
 .bold-verde{
 	strong, b{
 		color: #638796;
-		font-weight: 500;
+		font-weight: bold;
 	}
 }
 
@@ -247,6 +265,10 @@ b, strong{
 }
 
 @media only screen and (max-width: 1025px) {
+
+	ul.hfe-nav-menu{
+		box-shadow: 0px 1px 20px #0000001F;
+	}
 
 	.linha-esquerda{
 		p{

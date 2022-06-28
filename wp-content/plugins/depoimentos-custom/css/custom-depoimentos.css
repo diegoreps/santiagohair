@@ -87,6 +87,7 @@
   z-index: 9;
   border: unset;
   background-color: transparent;
+  padding: 0;
 }
 .depoimentos-linhas .arrow-left:hover, .depoimentos-linhas .arrow-right:hover {
   background-position: 50% center;
