@@ -542,6 +542,22 @@ function sessao_tecnicas($atts) {
     <?php
     ?>
 
+    <script>
+        jQuery( ".sessao-tecnicas-menu-item" ).on( "click", function() {
+
+            id = jQuery(this).attr('id');
+
+            jQuery(".sessao-tecnicas-menu-item").removeClass("sessao-ativa");
+
+            jQuery(".sessao-tecnicas-item").removeClass("sessao-ativa");
+
+            jQuery(this).addClass("sessao-ativa");
+
+            jQuery("."+ id).addClass("sessao-ativa");
+
+        });
+    </script>
+
     </div>
 
     <?php
