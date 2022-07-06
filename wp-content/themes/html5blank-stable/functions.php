@@ -457,7 +457,7 @@ function my_hide_permalinks_tecnicas($return, $post_id, $new_title, $new_slug, $
 function sessao_tecnicas($atts) {
 
     $args = array(
-        'posts_per_page' => 5, 
+        'posts_per_page' => -1, 
         'post_type' => "tecnicas",
         'post_status' => 'publish',
         'ignore_sticky_posts'	=> false,

@@ -133,7 +133,7 @@ b, strong{
 			a{
 				transition: all 0.5s ease;
 				.sub-arrow{
-					background-image: url("http://localhost/santiago/wp-content/uploads/2022/06/Icon-ionic-ios-arrow-dropdown.svg");
+					background-image: url("https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/06/Icon-ionic-ios-arrow-dropdown.svg");
 					background-repeat: no-repeat;
 					background-position: center;
 					width: 14px;
@@ -169,6 +169,17 @@ b, strong{
 			background-position: 100% center;
 		} 
 	}
+}
+
+button{
+		transition: all 0.5s ease; 
+		background-size: 200% auto;
+		&:hover{
+			background-position: 50% center;
+		}
+		&:focus, &:active{
+			background-position: 100% center;
+		} 
 }
 
 
@@ -237,13 +248,13 @@ b, strong{
 		.elementor-tab-title{
 			position: relative;
 			transition: all 0.5s ease;
-			background-image: url("http://localhost/santiago/wp-content/uploads/2022/06/Grupo-188.png");
+			background-image: url("https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/06/Grupo-188.png");
 			background-repeat: no-repeat;
 			background-position-y: 30px;
 			background-position-x: 98%;
 			&.elementor-active{
 				padding-bottom: 16px;
-				background-image: url("http://localhost/santiago/wp-content/uploads/2022/06/Grupo-189.png");
+				background-image: url("https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/06/Grupo-189.png");
 			}
 			.elementor-accordion-icon{
 				position: absolute;
@@ -279,26 +290,26 @@ b, strong{
 	min-height: 645px;
 	.sessao-tecnicas-menu{
 		display: block;
-		width: 398px;
+		width: vw(398);
 		.sessao-tecnicas-menu-item{
 			display: inline-flex;
 			align-items: center;
 			justify-content: center;
 			width: 100%;
-			height: 115px;
-			padding: 20px 41px 20px 25px;
-			border-radius: 20px;
+			height: vw(115);
+			padding: vw(20) vw(41) vw(20) vw(25);
+			border-radius: vw(20);
 			background-color: transparent;
 			transition: all 0.5s ease;
 			position: relative;
 			cursor: pointer;
-			margin-bottom: 10px;
+			margin-bottom: vw(10);
 			.sessao-tecnicas-menu-item-icone{
 				display: block;
-				width: 72px;
-				height: 72px;
+				width: vw(72);
+				height: vw(72);
 				background-color: rgba(#707070, 0.36);
-				padding: 15px;
+				padding: vw(15);
 				border-radius: 100%;
 				transition: all 0.5s ease;
 				margin-right: vw(39);
@@ -312,7 +323,7 @@ b, strong{
 			}
 			.sessao-tecnicas-menu-item-titulo{
 				display: block;
-				width: 191px;
+				width: vw(191);
 				span{
 					font-size: vw(20);
 					line-height: em(20, 26);
@@ -325,8 +336,8 @@ b, strong{
 				flex-direction: column;
 				align-items: center;
 				justify-content: center;
-				width: 28px;
-				height: 28px;
+				width: vw(28);
+				height: vw(28);
 				position: absolute;
 				right: 13px;
 				top: 50%;
@@ -337,8 +348,8 @@ b, strong{
 				background-size: 200% auto;
 				background-color: #B4B4B4;
 				img{
-					width: 9px;
-					height: 9px;
+					width: vw(9);
+					height: vw(9);
 					transition: all 0.5s ease;
 				}
 				padding: 0;
@@ -362,7 +373,7 @@ b, strong{
 					}
 				}
 				.sessao-tecnicas-menu-item-seta{
-					right: 10px;
+					right: vw(10);
 					background-image: linear-gradient(to right, #32444B 0%, #638796 51%, #638796 100%);
 					img{
 						transform: scale(-1);
@@ -385,9 +396,9 @@ b, strong{
 		z-index: -1;
 		.sessao-tecnicas-item-conteudo{
 			display: block;
-			width: 555px;
+			width: vw(555);
 			height: auto;
-			padding-left: 90px;
+			padding-left: vw(90);
 			position: absolute;
 			top: 50%;
 			transform: translateY(-50%);
@@ -408,7 +419,7 @@ b, strong{
 					font-size: vw(20);
 					line-height: em(20, 26);
 					color: #707070;
-					margin-bottom: 24px;
+					margin-bottom: vw(24);
 					text-align: left;
 					font-weight: 400;
 				}
@@ -422,7 +433,7 @@ b, strong{
 				background-color: #638796;
 				border-radius: 50px 50px 50px 50px;
 				box-shadow: 0px 3px 6px 0px rgba(0, 56.00000000000001, 58, 0.3607843137254902);
-				padding: 19px 45px 19px 45px;
+				padding: vw(29) vw(40);
 				background-image: linear-gradient(259deg, #638796 50%, #32444B 85%);
 				color: #fff;
 				transition: all 0.5s ease;
@@ -457,6 +468,105 @@ b, strong{
 		}
 		
 	}
+}
+
+.form-avaliacao{
+	display: block;
+	width: vw(1065);
+	max-width: 100%;
+	margin-right: auto;
+	padding-left: vw(89);
+	p{
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		margin-bottom: vw(30);
+		span{
+			input, select{
+				&:not([type="submit"], [type="checkbox"], [type="file"]){
+					display: block;
+					width: vw(398);
+					max-width: 100%;
+					height: vw(59);
+					padding: 0 vw(25);
+					background-color: transparent;
+					border: 1px solid #638796;
+					border-radius: 10px;
+					color: #638796;
+					font-size: vw(20);
+					line-height: em(20, 20);
+					font-weight: bold;
+					&::placeholder{
+						color: rgba(#638796, 0.5);
+					}
+				}
+			}
+			select{
+				appearance: none;
+				background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/seta-baixo.svg);
+				background-repeat: no-repeat;
+				background-position-y: center;
+				background-position-x: 97%;
+				&:focus{
+					background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/seta-cima.svg);
+				}
+			}
+			&:first-child{
+				padding-right: vw(8);
+			}
+			&:last-child{
+				padding-left: vw(8);
+			}
+		}
+		label{
+			display: block;
+			line-height: em(20, 26);
+			& > span{
+				display: block;
+				margin-top: vw(12);
+				&:first-child{
+					padding-right: 0;
+				}
+				&:last-child{
+					padding-left: 0;
+				}
+			}
+			&:first-child{
+				padding-right: vw(8);
+			}
+			&:last-child{
+				padding-left: vw(8);
+			}
+		}
+		
+	}
+
+	.botao-parte-01, .botao-parte-02{
+		display: block;
+		width: vw(816);
+		max-width: 100%;
+		margin-right: auto;
+		p{
+			justify-content: center;
+			button{
+				border: unset;
+			}
+		}
+	}
+
+	.form-avaliacao-parte-1, .form-avaliacao-parte-2{
+		display: block;
+		opacity: 0;
+		visibility: hidden;
+		height: 0;
+		transition: all 0.5s ease;
+		&.ativo{
+			opacity: 1;
+			visibility: visible;
+			height: 100%;
+		}
+	}
+
 }
 
 @media only screen and (max-width: 1025px) {

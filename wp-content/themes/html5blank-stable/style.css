@@ -132,7 +132,7 @@ b, strong {
   transition: all 0.5s ease;
 }
 #menu-pc ul li a .sub-arrow {
-  background-image: url("http://localhost/santiago/wp-content/uploads/2022/06/Icon-ionic-ios-arrow-dropdown.svg");
+  background-image: url("https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/06/Icon-ionic-ios-arrow-dropdown.svg");
   background-repeat: no-repeat;
   background-position: center;
   width: 14px;
@@ -161,6 +161,17 @@ b, strong {
   background-position: 50% center;
 }
 .elementor-widget-button .elementor-button-link:focus, .elementor-widget-button .elementor-button-link:active {
+  background-position: 100% center;
+}
+
+button {
+  transition: all 0.5s ease;
+  background-size: 200% auto;
+}
+button:hover {
+  background-position: 50% center;
+}
+button:focus, button:active {
   background-position: 100% center;
 }
 
@@ -223,14 +234,14 @@ b, strong {
 #faq .elementor-accordion-item .elementor-tab-title {
   position: relative;
   transition: all 0.5s ease;
-  background-image: url("http://localhost/santiago/wp-content/uploads/2022/06/Grupo-188.png");
+  background-image: url("https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/06/Grupo-188.png");
   background-repeat: no-repeat;
   background-position-y: 30px;
   background-position-x: 98%;
 }
 #faq .elementor-accordion-item .elementor-tab-title.elementor-active {
   padding-bottom: 16px;
-  background-image: url("http://localhost/santiago/wp-content/uploads/2022/06/Grupo-189.png");
+  background-image: url("https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/06/Grupo-189.png");
 }
 #faq .elementor-accordion-item .elementor-tab-title .elementor-accordion-icon {
   position: absolute;
@@ -263,28 +274,28 @@ b, strong {
 }
 .sessao-tecnicas .sessao-tecnicas-menu {
   display: block;
-  width: 398px;
+  width: 20.7291666667vw;
 }
 .sessao-tecnicas .sessao-tecnicas-menu .sessao-tecnicas-menu-item {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 115px;
-  padding: 20px 41px 20px 25px;
-  border-radius: 20px;
+  height: 5.9895833333vw;
+  padding: 1.0416666667vw 2.1354166667vw 1.0416666667vw 1.3020833333vw;
+  border-radius: 1.0416666667vw;
   background-color: transparent;
   transition: all 0.5s ease;
   position: relative;
   cursor: pointer;
-  margin-bottom: 10px;
+  margin-bottom: 0.5208333333vw;
 }
 .sessao-tecnicas .sessao-tecnicas-menu .sessao-tecnicas-menu-item .sessao-tecnicas-menu-item-icone {
   display: block;
-  width: 72px;
-  height: 72px;
+  width: 3.75vw;
+  height: 3.75vw;
   background-color: rgba(112, 112, 112, 0.36);
-  padding: 15px;
+  padding: 0.78125vw;
   border-radius: 100%;
   transition: all 0.5s ease;
   margin-right: 2.03125vw;
@@ -300,7 +311,7 @@ b, strong {
 }
 .sessao-tecnicas .sessao-tecnicas-menu .sessao-tecnicas-menu-item .sessao-tecnicas-menu-item-titulo {
   display: block;
-  width: 191px;
+  width: 9.9479166667vw;
 }
 .sessao-tecnicas .sessao-tecnicas-menu .sessao-tecnicas-menu-item .sessao-tecnicas-menu-item-titulo span {
   font-size: 1.0416666667vw;
@@ -313,8 +324,8 @@ b, strong {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
+  width: 1.4583333333vw;
+  height: 1.4583333333vw;
   position: absolute;
   right: 13px;
   top: 50%;
@@ -327,8 +338,8 @@ b, strong {
   padding: 0;
 }
 .sessao-tecnicas .sessao-tecnicas-menu .sessao-tecnicas-menu-item .sessao-tecnicas-menu-item-seta img {
-  width: 9px;
-  height: 9px;
+  width: 0.46875vw;
+  height: 0.46875vw;
   transition: all 0.5s ease;
 }
 .sessao-tecnicas .sessao-tecnicas-menu .sessao-tecnicas-menu-item .sessao-tecnicas-menu-item-seta:hover {
@@ -348,7 +359,7 @@ b, strong {
   font-weight: bold;
 }
 .sessao-tecnicas .sessao-tecnicas-menu .sessao-tecnicas-menu-item.sessao-ativa .sessao-tecnicas-menu-item-seta, .sessao-tecnicas .sessao-tecnicas-menu .sessao-tecnicas-menu-item:hover .sessao-tecnicas-menu-item-seta {
-  right: 10px;
+  right: 0.5208333333vw;
   background-image: linear-gradient(to right, #32444B 0%, #638796 51%, #638796 100%);
 }
 .sessao-tecnicas .sessao-tecnicas-menu .sessao-tecnicas-menu-item.sessao-ativa .sessao-tecnicas-menu-item-seta img, .sessao-tecnicas .sessao-tecnicas-menu .sessao-tecnicas-menu-item:hover .sessao-tecnicas-menu-item-seta img {
@@ -369,9 +380,9 @@ b, strong {
 }
 .sessao-tecnicas .sessao-tecnicas-item .sessao-tecnicas-item-conteudo {
   display: block;
-  width: 555px;
+  width: 28.90625vw;
   height: auto;
-  padding-left: 90px;
+  padding-left: 4.6875vw;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -390,7 +401,7 @@ b, strong {
   font-size: 1.0416666667vw;
   line-height: 1.3em;
   color: #707070;
-  margin-bottom: 24px;
+  margin-bottom: 1.25vw;
   text-align: left;
   font-weight: 400;
 }
@@ -405,7 +416,7 @@ b, strong {
   background-color: #638796;
   border-radius: 50px 50px 50px 50px;
   box-shadow: 0px 3px 6px 0px rgba(0, 56, 58, 0.3607843137);
-  padding: 19px 45px 19px 45px;
+  padding: 1.5104166667vw 2.0833333333vw;
   background-image: linear-gradient(259deg, #638796 50%, #32444B 85%);
   color: #fff;
   transition: all 0.5s ease;
@@ -431,6 +442,104 @@ b, strong {
   height: 100%;
   opacity: 1;
   visibility: visible;
+}
+
+.form-avaliacao {
+  display: block;
+  width: 55.46875vw;
+  max-width: 100%;
+  margin-right: auto;
+  padding-left: 4.6354166667vw;
+}
+.form-avaliacao p {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 1.5625vw;
+}
+.form-avaliacao p span input:not([type=submit], [type=checkbox], [type=file]), .form-avaliacao p span select:not([type=submit], [type=checkbox], [type=file]) {
+  display: block;
+  width: 20.7291666667vw;
+  max-width: 100%;
+  height: 3.0729166667vw;
+  padding: 0 1.3020833333vw;
+  background-color: transparent;
+  border: 1px solid #638796;
+  border-radius: 10px;
+  color: #638796;
+  font-size: 1.0416666667vw;
+  line-height: 1em;
+  font-weight: bold;
+}
+.form-avaliacao p span input:not([type=submit], [type=checkbox], [type=file])::-moz-placeholder, .form-avaliacao p span select:not([type=submit], [type=checkbox], [type=file])::-moz-placeholder {
+  color: rgba(99, 135, 150, 0.5);
+}
+.form-avaliacao p span input:not([type=submit], [type=checkbox], [type=file]):-ms-input-placeholder, .form-avaliacao p span select:not([type=submit], [type=checkbox], [type=file]):-ms-input-placeholder {
+  color: rgba(99, 135, 150, 0.5);
+}
+.form-avaliacao p span input:not([type=submit], [type=checkbox], [type=file])::placeholder, .form-avaliacao p span select:not([type=submit], [type=checkbox], [type=file])::placeholder {
+  color: rgba(99, 135, 150, 0.5);
+}
+.form-avaliacao p span select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/seta-baixo.svg);
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 97%;
+}
+.form-avaliacao p span select:focus {
+  background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/seta-cima.svg);
+}
+.form-avaliacao p span:first-child {
+  padding-right: 0.4166666667vw;
+}
+.form-avaliacao p span:last-child {
+  padding-left: 0.4166666667vw;
+}
+.form-avaliacao p label {
+  display: block;
+}
+.form-avaliacao p label > span {
+  display: block;
+  margin-top: 0.625vw;
+}
+.form-avaliacao p label > span:first-child {
+  padding-right: 0;
+}
+.form-avaliacao p label > span:last-child {
+  padding-left: 0;
+}
+.form-avaliacao p label:first-child {
+  padding-right: 0.4166666667vw;
+}
+.form-avaliacao p label:last-child {
+  padding-left: 0.4166666667vw;
+}
+.form-avaliacao .botao-parte-01, .form-avaliacao .botao-parte-02 {
+  display: block;
+  width: 42.5vw;
+  max-width: 100%;
+  margin-right: auto;
+}
+.form-avaliacao .botao-parte-01 p, .form-avaliacao .botao-parte-02 p {
+  justify-content: center;
+}
+.form-avaliacao .botao-parte-01 p button, .form-avaliacao .botao-parte-02 p button {
+  border: unset;
+}
+.form-avaliacao .form-avaliacao-parte-1, .form-avaliacao .form-avaliacao-parte-2 {
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  transition: all 0.5s ease;
+}
+.form-avaliacao .form-avaliacao-parte-1.ativo, .form-avaliacao .form-avaliacao-parte-2.ativo {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
 }
 
 @media only screen and (max-width: 1025px) {
