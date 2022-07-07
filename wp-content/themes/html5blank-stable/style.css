@@ -451,6 +451,9 @@ button:focus, button:active {
   margin-right: auto;
   padding-left: 4.6354166667vw;
 }
+.form-avaliacao .wpcf7-not-valid-tip {
+  display: none;
+}
 .form-avaliacao p {
   display: flex;
   align-items: center;
@@ -480,6 +483,11 @@ button:focus, button:active {
 .form-avaliacao p span input:not([type=submit], [type=checkbox], [type=file])::placeholder, .form-avaliacao p span select:not([type=submit], [type=checkbox], [type=file])::placeholder {
   color: rgba(99, 135, 150, 0.5);
 }
+.form-avaliacao p span input[type=checkbox], .form-avaliacao p span select[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+}
 .form-avaliacao p span select {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -500,10 +508,75 @@ button:focus, button:active {
 }
 .form-avaliacao p label {
   display: block;
+  line-height: 1.3em;
 }
 .form-avaliacao p label > span {
   display: block;
+}
+.form-avaliacao p label > span:not(.wpcf7-checkbox, .wpcf7-checkbox span) {
   margin-top: 0.625vw;
+}
+.form-avaliacao p label > span .wpcf7-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.form-avaliacao p label > span .wpcf7-checkbox .wpcf7-list-item {
+  display: block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 3.0729166667vw;
+  margin: 0 0.8333333333vw 1.3020833333vw 0;
+  border: 1px solid #707070;
+  transition: border-color 0.5s ease;
+  position: relative;
+  z-index: 2;
+  border-radius: 10px;
+}
+.form-avaliacao p label > span .wpcf7-checkbox .wpcf7-list-item label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0.9635416667vw 1.2239583333vw;
+  cursor: pointer;
+}
+.form-avaliacao p label > span .wpcf7-checkbox .wpcf7-list-item .wpcf7-list-item-label {
+  font-size: 0.9375vw;
+  line-height: 1.1111111111em;
+  position: relative;
+  z-index: 1;
+}
+.form-avaliacao p label > span .wpcf7-checkbox .wpcf7-list-item::before {
+  content: "";
+  display: block;
+  width: 1.6145833333vw;
+  height: 1.6145833333vw;
+  position: absolute;
+  top: -0.8072916667vw;
+  right: -0.8072916667vw;
+  background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/Grupo-121.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+  transition: all 0.5s ease;
+  background-size: contain;
+}
+.form-avaliacao p label > span .wpcf7-checkbox .wpcf7-list-item.ativo {
+  border-width: 3px;
+  border-color: #638796;
+  margin-right: 0.625vw;
+}
+.form-avaliacao p label > span .wpcf7-checkbox .wpcf7-list-item.ativo .wpcf7-list-item-label {
+  color: #638796;
+}
+.form-avaliacao p label > span .wpcf7-checkbox .wpcf7-list-item.ativo::before {
+  opacity: 1;
+  visibility: visible;
+  z-index: 3;
 }
 .form-avaliacao p label > span:first-child {
   padding-right: 0;
@@ -517,6 +590,174 @@ button:focus, button:active {
 .form-avaliacao p label:last-child {
   padding-left: 0.4166666667vw;
 }
+.form-avaliacao .form-avaliacao-parte-2-sim, .form-avaliacao .form-avaliacao-parte-2-nao {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  transition: all 0.5s ease;
+}
+.form-avaliacao .form-avaliacao-parte-2-sim.ativo, .form-avaliacao .form-avaliacao-parte-2-nao.ativo {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+.form-avaliacao .form-avaliacao-parte-2-sim {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+.form-avaliacao .form-avaliacao-parte-2-sim .form-avaliacao-parte-2-sim-col {
+  display: block;
+  width: 13.90625vw;
+  max-width: 100%;
+  height: 27.34375vw;
+  position: relative;
+  padding-top: 1.0416666667vw;
+  padding-bottom: 3.6458333333vw;
+}
+.form-avaliacao .form-avaliacao-parte-2-sim .form-avaliacao-parte-2-sim-col::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 23.4375vw;
+  background-color: #B9B9B9;
+}
+.form-avaliacao .form-avaliacao-parte-2-sim .form-avaliacao-parte-2-sim-col img {
+  display: block;
+  max-width: 9.1145833333vw;
+  width: 100%;
+  max-height: 11.6666666667vw;
+  height: 100%;
+  margin: 0 auto 1.5625vw auto;
+}
+.form-avaliacao .form-avaliacao-parte-2-sim .form-avaliacao-parte-2-sim-col span {
+  display: block;
+  text-align: center;
+  font-size: 0.9895833333vw;
+  line-height: 1.3em;
+  margin: 0;
+}
+.form-avaliacao .form-avaliacao-parte-2-sim .form-avaliacao-parte-2-sim-col button {
+  width: 10.78125vw;
+  border: unset;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  padding: 0.78125vw 1.6666666667vw;
+}
+.form-avaliacao .form-avaliacao-parte-2-sim .form-avaliacao-parte-2-sim-col input[type=file] {
+  display: none;
+}
+.form-avaliacao .form-avaliacao-parte-2-sim .form-avaliacao-parte-2-sim-col:not(:last-child) {
+  padding-right: 1.0416666667vw;
+}
+.form-avaliacao .form-avaliacao-parte-2-sim .form-avaliacao-parte-2-sim-col:not(:last-child) span {
+  padding: 0 0 0 1.0416666667vw;
+}
+.form-avaliacao .form-avaliacao-parte-2-sim .form-avaliacao-parte-2-sim-col:not(:last-child)::before {
+  right: 0;
+}
+.form-avaliacao .form-avaliacao-parte-2-sim .form-avaliacao-parte-2-sim-col:last-child {
+  padding-left: 1.0416666667vw;
+}
+.form-avaliacao .form-avaliacao-parte-2-sim .form-avaliacao-parte-2-sim-col:last-child span {
+  padding: 0 1.0416666667vw 0 0;
+}
+.form-avaliacao .form-avaliacao-parte-2-sim .form-avaliacao-parte-2-sim-col:last-child::before {
+  left: 0;
+}
+.form-avaliacao .form-avaliacao-parte-2-nao .wpcf7-form-control-wrap .wpcf7-checkbox {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.form-avaliacao .form-avaliacao-parte-2-nao .wpcf7-form-control-wrap .wpcf7-checkbox .wpcf7-list-item {
+  display: block;
+  width: 12.2916666667vw;
+  height: 10.3645833333vw;
+  border: 3px solid transparent;
+  transition: border-color 0.5s ease;
+  position: relative;
+  z-index: 2;
+  border-radius: 10px;
+  margin: 0;
+}
+.form-avaliacao .form-avaliacao-parte-2-nao .wpcf7-form-control-wrap .wpcf7-checkbox .wpcf7-list-item label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 8.75vw 0 0.3645833333vw 0;
+  cursor: pointer;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  background-size: 90%;
+}
+.form-avaliacao .form-avaliacao-parte-2-nao .wpcf7-form-control-wrap .wpcf7-checkbox .wpcf7-list-item .wpcf7-list-item-label {
+  font-size: 0.9375vw;
+  line-height: 1.1111111111em;
+  position: relative;
+  z-index: 1;
+}
+.form-avaliacao .form-avaliacao-parte-2-nao .wpcf7-form-control-wrap .wpcf7-checkbox .wpcf7-list-item::before {
+  content: "";
+  display: block;
+  width: 1.6145833333vw;
+  height: 1.6145833333vw;
+  position: absolute;
+  top: -0.8072916667vw;
+  right: 0.8072916667vw;
+  background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/Grupo-121.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+  transition: all 0.5s ease;
+  background-size: contain;
+}
+.form-avaliacao .form-avaliacao-parte-2-nao .wpcf7-form-control-wrap .wpcf7-checkbox .wpcf7-list-item.ativo {
+  border-width: 3px;
+  border-color: #638796;
+}
+.form-avaliacao .form-avaliacao-parte-2-nao .wpcf7-form-control-wrap .wpcf7-checkbox .wpcf7-list-item.ativo .wpcf7-list-item-label {
+  color: #638796;
+}
+.form-avaliacao .form-avaliacao-parte-2-nao .wpcf7-form-control-wrap .wpcf7-checkbox .wpcf7-list-item.ativo::before {
+  opacity: 1;
+  visibility: visible;
+  z-index: 3;
+}
+.form-avaliacao .form-avaliacao-parte-2-nao .wpcf7-form-control-wrap .wpcf7-checkbox .wpcf7-list-item:nth-child(1) label {
+  background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/grau01.svg);
+}
+.form-avaliacao .form-avaliacao-parte-2-nao .wpcf7-form-control-wrap .wpcf7-checkbox .wpcf7-list-item:nth-child(2) label {
+  background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/grau02.svg);
+}
+.form-avaliacao .form-avaliacao-parte-2-nao .wpcf7-form-control-wrap .wpcf7-checkbox .wpcf7-list-item:nth-child(3) label {
+  background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/grau03.svg);
+}
+.form-avaliacao .form-avaliacao-parte-2-nao .wpcf7-form-control-wrap .wpcf7-checkbox .wpcf7-list-item:nth-child(4) label {
+  background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/grau04.svg);
+}
+.form-avaliacao .form-avaliacao-parte-2-nao .wpcf7-form-control-wrap .wpcf7-checkbox .wpcf7-list-item:nth-child(5) label {
+  background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/grau05.svg);
+}
+.form-avaliacao .form-avaliacao-parte-2-nao .wpcf7-form-control-wrap .wpcf7-checkbox .wpcf7-list-item:nth-child(6) label {
+  background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/grau06.svg);
+}
+.form-avaliacao .form-avaliacao-parte-2-nao .wpcf7-form-control-wrap .wpcf7-checkbox .wpcf7-list-item:nth-child(7) label {
+  background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/grau07.svg);
+}
+.form-avaliacao .form-avaliacao-parte-2-nao .wpcf7-form-control-wrap .wpcf7-checkbox .wpcf7-list-item:nth-child(8) label {
+  background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/grau08.svg);
+}
 .form-avaliacao .botao-parte-01, .form-avaliacao .botao-parte-02 {
   display: block;
   width: 42.5vw;
@@ -526,8 +767,26 @@ button:focus, button:active {
 .form-avaliacao .botao-parte-01 p, .form-avaliacao .botao-parte-02 p {
   justify-content: center;
 }
-.form-avaliacao .botao-parte-01 p button, .form-avaliacao .botao-parte-02 p button {
+.form-avaliacao .botao-parte-01 p button, .form-avaliacao .botao-parte-01 p input, .form-avaliacao .botao-parte-02 p button, .form-avaliacao .botao-parte-02 p input {
   border: unset;
+}
+.form-avaliacao .botao-parte-02 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5.2083333333vw 0 0 0;
+}
+.form-avaliacao .botao-parte-02 p {
+  margin: 0 0.7291666667vw;
+}
+.form-avaliacao .botao-parte-02 p #parte-1 {
+  background-image: unset;
+  padding: 0;
+  font-size: 1.0416666667vw;
+  line-height: 1em;
+  font-weight: 500;
+  color: #638796;
+  box-shadow: unset;
 }
 .form-avaliacao .form-avaliacao-parte-1, .form-avaliacao .form-avaliacao-parte-2 {
   display: block;

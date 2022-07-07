@@ -476,6 +476,9 @@ button{
 	max-width: 100%;
 	margin-right: auto;
 	padding-left: vw(89);
+	.wpcf7-not-valid-tip{
+		display: none;
+	}
 	p{
 		display: flex;
 		align-items: center;
@@ -500,6 +503,11 @@ button{
 						color: rgba(#638796, 0.5);
 					}
 				}
+				&[type="checkbox"]{
+					position: absolute;
+					opacity: 0;
+					visibility: hidden;
+				}
 			}
 			select{
 				appearance: none;
@@ -523,7 +531,71 @@ button{
 			line-height: em(20, 26);
 			& > span{
 				display: block;
-				margin-top: vw(12);
+				&:not(.wpcf7-checkbox, .wpcf7-checkbox span){
+					margin-top: vw(12);
+				}
+				.wpcf7-checkbox{
+					display: flex;
+					align-items: center;
+					justify-content: flex-start;
+					flex-wrap: wrap;
+					.wpcf7-list-item{
+						display: block;
+						width: max-content;
+						height: vw(59);
+						margin: 0 vw(16) vw(25) 0;
+						border: 1px solid #707070;
+						transition: border-color 0.5s ease;
+						position: relative;
+						z-index: 2;
+						border-radius: 10px;
+						label{
+							display: block;
+							width: 100%;
+							height: 100%;
+							padding: vw(18.5) vw(23.5);
+							cursor: pointer;
+						}
+						.wpcf7-list-item-label{
+							font-size: vw(18);
+							line-height: em(18, 20);
+							position: relative;
+							z-index: 1;
+						}
+						&::before{
+							content: "";
+							display: block;
+							width: vw(31);
+							height: vw(31);
+							position: absolute;
+							top: vw(-15.5);
+							right: vw(-15.5);
+							background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/Grupo-121.svg);
+							background-position: center;
+							background-repeat: no-repeat;
+							opacity: 0;
+							visibility: hidden;
+							z-index: 1;
+							transition: all 0.5s ease;
+							background-size: contain;
+						}
+						&.ativo{
+							border-width: 3px;
+							border-color: #638796;
+							margin-right: vw(12);
+							.wpcf7-list-item-label{
+								color: #638796;
+							}
+							&::before{
+								opacity: 1;
+								visibility: visible;
+								z-index: 3;
+							}
+
+						}
+					}
+					
+				}
 				&:first-child{
 					padding-right: 0;
 				}
@@ -541,6 +613,209 @@ button{
 		
 	}
 
+	.form-avaliacao-parte-2-sim, .form-avaliacao-parte-2-nao{
+		opacity: 0;
+		visibility: hidden;
+		height: 0;
+		transition: all 0.5s ease;
+		&.ativo{
+			opacity: 1;
+			visibility: visible;
+			height: 100%;
+		}
+	}
+
+	.form-avaliacao-parte-2-sim{
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+		width: 100%;
+		.form-avaliacao-parte-2-sim-col{
+			display: block;
+			width: vw(267);
+			max-width: 100%;
+			height: vw(525);
+			position: relative;
+			padding-top: vw(20);
+			padding-bottom: vw(70);
+			&::before{
+				content: "";
+				display: block;
+				position: absolute;
+				top: 0;
+				width: 1px;
+				height: vw(450);
+				background-color: #B9B9B9;
+			}
+			img{
+				display: block;
+				max-width: vw(175);
+				width: 100%;
+				max-height: vw(224);
+				height: 100%;
+				margin: 0 auto vw(30) auto;
+			}
+			span{
+				display: block;
+				text-align: center;
+				font-size: vw(19);
+				line-height: em(20, 26);
+				margin: 0;
+			}
+			button{
+				width: vw(207);
+				border: unset;
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				z-index: 2;
+				padding: vw(15) vw(32);
+			}
+			input[type=file]{
+				display: none;
+			}
+			&:not(:last-child){
+				padding-right: vw(20);
+				span{
+					padding: 0 0 0 vw(20);
+				}
+				&::before{
+					right: 0;
+				}
+			}
+			&:last-child{
+				padding-left: vw(20);
+				span{
+					padding: 0 vw(20) 0 0;
+				}
+				&::before{
+					left: 0;
+				}
+			}
+		}
+
+		
+	}
+
+	.form-avaliacao-parte-2-nao{
+		.wpcf7-form-control-wrap{
+			.wpcf7-checkbox{
+				display: flex;
+				align-items: flex-start;
+				justify-content: flex-start;
+				flex-wrap: wrap;
+				.wpcf7-list-item{
+					display: block;
+					width: vw(236);
+					height: vw(199);
+					border: 3px solid transparent;
+					transition: border-color 0.5s ease;
+					position: relative;
+					z-index: 2;
+					border-radius: 10px;
+					margin: 0;
+					label{
+						display: block;
+						width: 100%;
+						height: 100%;
+						padding: vw(168) 0 vw(7) 0;
+						cursor: pointer;
+						text-align: center;
+						background-repeat: no-repeat;
+						background-position: 15px center;
+						background-size: 90%;
+					}
+					.wpcf7-list-item-label{
+						font-size: vw(18);
+						line-height: em(18, 20);
+						position: relative;
+						z-index: 1;
+					}
+					&::before{
+						content: "";
+						display: block;
+						width: vw(31);
+						height: vw(31);
+						position: absolute;
+						top: vw(-15.5);
+						right: vw(15.5);
+						background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/Grupo-121.svg);
+						background-position: center;
+						background-repeat: no-repeat;
+						opacity: 0;
+						visibility: hidden;
+						z-index: 1;
+						transition: all 0.5s ease;
+						background-size: contain;
+					}
+					&.ativo{
+						border-width: 3px;
+						border-color: #638796;
+						.wpcf7-list-item-label{
+							color: #638796;
+						}
+						&::before{
+							opacity: 1;
+							visibility: visible;
+							z-index: 3;
+						}
+
+					}
+					&:nth-child(1){
+						label{
+							background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/grau01.svg);
+							
+						}
+					}
+					&:nth-child(2){
+						label{
+							background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/grau02.svg);
+							
+						}
+					}
+					&:nth-child(3){
+						label{
+							background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/grau03.svg);
+							
+						}
+					}
+					&:nth-child(4){
+						label{
+							background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/grau04.svg);
+							
+						}
+					}
+					&:nth-child(5){
+						label{
+							background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/grau05.svg);
+							
+						}
+					}
+					&:nth-child(6){
+						label{
+							background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/grau06.svg);
+							
+						}
+					}
+					&:nth-child(7){
+						label{
+							background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/grau07.svg);
+							
+						}
+					}
+					&:nth-child(8){
+						label{
+							background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/grau08.svg);
+							
+						}
+					}
+				}
+				
+			}
+		}
+	}
+
 	.botao-parte-01, .botao-parte-02{
 		display: block;
 		width: vw(816);
@@ -548,8 +823,27 @@ button{
 		margin-right: auto;
 		p{
 			justify-content: center;
-			button{
+			button, input{
 				border: unset;
+			}
+		}
+	}
+
+	.botao-parte-02{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: vw(100) 0 0 0;
+		p{
+			margin: 0 vw(14);
+			#parte-1{
+				background-image: unset;
+				padding: 0;
+				font-size: vw(20);
+				line-height: em(20, 20);
+				font-weight: 500;
+				color: #638796;
+				box-shadow: unset;
 			}
 		}
 	}
