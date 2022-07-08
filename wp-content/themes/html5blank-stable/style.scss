@@ -903,6 +903,92 @@ button{
 
 }
 
+.etapa{
+	display: block;
+	width: 100%;
+	position: relative;
+	min-height: vw(315);
+	&::before, &::after{
+		content: "";
+		display: block;
+		position: absolute;
+		background-color: #B9B9B9;
+	}
+	&::before{
+		width: 1px;
+		height: vw(315);
+		z-index: 1;
+		right: vw(24);
+		top: 0;
+	}
+	&::after{
+		width: 8px;
+		height: 8px;
+		z-index: 2;
+		right: vw(20);
+		border-radius: 100%;
+		top: vw(147);
+	}
+	span{
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		width: 100%;
+		text-align: right;
+		color: #638796;
+		transition: color 0.5s ease;
+		box-sizing: border-box;
+		&::after{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: vw(48);
+			height: vw(48);
+			border: 1px solid #638796;
+			border-radius: 100%;
+			margin-left: vw(16);
+			transition: all 0.5s ease;
+			font-size: vw(20);
+			line-height: em(20, 26);
+			font-weight: bold;
+			position: relative;
+			z-index: 3;
+		}
+		&.parte-01{
+			font-weight: bold;
+			padding: vw(55) 0 vw(92) 0;
+			&::after{
+				content: "1";
+				background-color: #638796;
+				color: #D0DAE1;
+			}
+			&.correto{
+				color: #93C06C;
+				&::after{
+					content: url(http://localhost/santiago/wp-content/uploads/2022/07/Grupo-112.svg);
+					background-color: #D0DAE1;
+					border-color: #93C06C;
+				}
+			}
+		}
+		&.parte-02{
+			font-weight: 400;
+			&::after{
+				content: "2";
+				background-color: #D0DAE1;
+				color: #638796;
+			}
+			&.ativo{
+				font-weight: bold;
+				&::after{
+					background-color: #638796;
+					color: #D0DAE1;
+				}
+			}
+		}
+	}
+}
+
 @media only screen and (max-width: 1025px) {
 
 	ul.hfe-nav-menu{
@@ -946,6 +1032,183 @@ button{
 		}
 	
 	}
+
+	.form-avaliacao{
+		width: 100%;
+		padding-left: 0;
+		.wpcf7-spinner{
+			display: none;
+		}
+		p{
+			display: block;
+			margin-bottom: 0;
+			span{
+				input, select{
+					&:not([type="submit"], [type="checkbox"], [type="file"]){
+						display: block;
+						width: 100%;
+						max-width: 100%;
+						height: 40px;
+						padding: 0 31px 0 20px;
+						font-size: 14px;
+						margin-bottom: 20px;
+					}
+				}
+				&:first-child{
+					padding-right: 0;
+				}
+				&:last-child{
+					padding-left: 0;
+				}
+			}
+			label{
+				font-size: 14px;
+				text-align: center;
+				& > span{
+					&:not(.wpcf7-checkbox, .wpcf7-checkbox span){
+						margin-top: 10px;
+					}
+					.wpcf7-checkbox{
+						margin-bottom: 20px;
+						.wpcf7-list-item{
+							height: auto;
+							margin: 0 10px 10px 0;
+							label{
+								display: block;
+								width: 100%;
+								height: 100%;
+								padding: 10px 20px;
+								cursor: pointer;
+							}
+							.wpcf7-list-item-label{
+								font-size: 14px;
+							}
+							&::before{
+								width: 25px;
+								height: 25px;
+								top: -12.5px;
+								right: -12.5px;
+							}
+							&.ativo{
+								margin-right: 4px;
+	
+							}
+						}
+						
+					}
+				}
+				&:first-child{
+					padding-right: 0;
+				}
+				&:last-child{
+					padding-left: 0;
+				}
+			}
+			
+		}
+	
+		.form-avaliacao-parte-2-sim{
+			display: block;
+			.form-avaliacao-parte-2-sim-col{
+				display: block;
+				width: 100%;
+				height: auto;
+				padding-top: 20px;
+				padding-bottom: 0;
+				margin-bottom: 20px;
+				&::before{
+					display: none;
+				}
+				img{
+					display: block;
+					max-width: 87.5px;
+					max-height: 112px;
+					margin: 0 auto 20px auto;
+				}
+				span{
+					font-size: 14px;
+				}
+				button{
+					width: max-content;
+					margin: 20px auto 0 auto;
+					border: unset;
+					position: unset;
+					bottom: unset;
+					left: unset;
+					transform: unset;
+					z-index: 2;
+					padding: 10px 20px;
+					display: block;
+				}
+				&:not(:last-child){
+					padding-right: 0;
+					span{
+						padding: 0;
+					}
+				}
+				&:last-child{
+					padding-left: 0;
+					span{
+						padding: 0;
+					}
+				}
+			}
+	
+			
+		}
+	
+		.form-avaliacao-parte-2-nao{
+			.wpcf7-form-control-wrap{
+				.wpcf7-checkbox{
+					display: block;
+					.wpcf7-list-item{
+						display: block;
+						width: 100%;
+						margin: 10px auto;
+						height: auto;
+						label{
+							padding: 100px 0 10px 0;
+							background-size: 40%;
+							background-position: center 0;
+						}
+						.wpcf7-list-item-label{
+							font-size: 14px;
+						}
+						&::before{
+							width: 25px;
+							height: 25px;
+							top: -12.5px;
+							right: -12.5px;
+						}
+					}
+					
+				}
+			}
+		}
+	
+		.botao-parte-01, .botao-parte-02{
+			width: 100%;
+			p{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+	
+		.botao-parte-02{
+			margin: 0;
+			flex-direction: column;
+			p{
+				margin: 0;
+				#parte-1{
+					font-size: 14px;
+					margin-bottom: 20px;
+				}
+			}
+		}
+	
+	
+	}
 	
 }
 
@@ -972,6 +1235,56 @@ button{
 				}
 			}
 		}
+	
+	}
+
+	.form-avaliacao{
+		p{
+			span{
+				input, select{
+					&:not([type="submit"], [type="checkbox"], [type="file"]){
+						font-size: 10px;
+					}
+				}
+			}
+			label{
+				font-size: 10px;
+				& > span{
+					.wpcf7-checkbox{
+						.wpcf7-list-item{
+							.wpcf7-list-item-label{
+								font-size: 10px;
+							}
+						}
+						
+					}
+				}
+			}
+			
+		}
+	
+		.form-avaliacao-parte-2-nao{
+			.wpcf7-form-control-wrap{
+				.wpcf7-checkbox{
+					.wpcf7-list-item{
+						.wpcf7-list-item-label{
+							font-size: 10px;
+						}
+					}
+					
+				}
+			}
+		}
+	
+		.botao-parte-02{
+			p{
+				#parte-1{
+					font-size: 10px;
+					margin-bottom: 20px;
+				}
+			}
+		}
+	
 	
 	}
 }
