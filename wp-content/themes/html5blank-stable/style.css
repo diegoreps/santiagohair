@@ -465,7 +465,7 @@ button:focus, button:active {
   width: 20.7291666667vw;
   max-width: 100%;
   height: 3.0729166667vw;
-  padding: 0 1.3020833333vw;
+  padding: 0 1.6145833333vw 0 1.3020833333vw;
   background-color: transparent;
   border: 1px solid #638796;
   border-radius: 10px;
@@ -473,20 +473,65 @@ button:focus, button:active {
   font-size: 1.0416666667vw;
   line-height: 1em;
   font-weight: bold;
+  transition: all 0.5s ease;
+  outline: 0;
 }
 .form-avaliacao p span input:not([type=submit], [type=checkbox], [type=file])::-moz-placeholder, .form-avaliacao p span select:not([type=submit], [type=checkbox], [type=file])::-moz-placeholder {
   color: rgba(99, 135, 150, 0.5);
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 .form-avaliacao p span input:not([type=submit], [type=checkbox], [type=file]):-ms-input-placeholder, .form-avaliacao p span select:not([type=submit], [type=checkbox], [type=file]):-ms-input-placeholder {
   color: rgba(99, 135, 150, 0.5);
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 .form-avaliacao p span input:not([type=submit], [type=checkbox], [type=file])::placeholder, .form-avaliacao p span select:not([type=submit], [type=checkbox], [type=file])::placeholder {
   color: rgba(99, 135, 150, 0.5);
+  transition: all 0.5s ease;
 }
 .form-avaliacao p span input[type=checkbox], .form-avaliacao p span select[type=checkbox] {
   position: absolute;
   opacity: 0;
   visibility: hidden;
+}
+.form-avaliacao p span input {
+  background-position-y: center;
+  background-position-x: 99%;
+  background-repeat: no-repeat;
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+.form-avaliacao p span input.certo {
+  border-color: #2ECC71;
+  color: #2ECC71;
+  background-position-x: 97%;
+  background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/check.svg);
+}
+.form-avaliacao p span input.certo::-moz-placeholder {
+  color: rgba(46, 204, 113, 0.5);
+}
+.form-avaliacao p span input.certo:-ms-input-placeholder {
+  color: rgba(46, 204, 113, 0.5);
+}
+.form-avaliacao p span input.certo::placeholder {
+  color: rgba(46, 204, 113, 0.5);
+}
+.form-avaliacao p span input.errado {
+  border-color: #FA4A38;
+  color: #FA4A38;
+  background-position-x: 97%;
+  background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/delete_cross.svg);
+}
+.form-avaliacao p span input.errado::-moz-placeholder {
+  color: rgba(250, 74, 56, 0.5);
+}
+.form-avaliacao p span input.errado:-ms-input-placeholder {
+  color: rgba(250, 74, 56, 0.5);
+}
+.form-avaliacao p span input.errado::placeholder {
+  color: rgba(250, 74, 56, 0.5);
 }
 .form-avaliacao p span select {
   -webkit-appearance: none;
@@ -499,6 +544,10 @@ button:focus, button:active {
 }
 .form-avaliacao p span select:focus {
   background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/seta-cima.svg);
+}
+.form-avaliacao p span select.certo {
+  border-color: #2ECC71;
+  color: #2ECC71;
 }
 .form-avaliacao p span:first-child {
   padding-right: 0.4166666667vw;
@@ -564,6 +613,14 @@ button:focus, button:active {
   z-index: 1;
   transition: all 0.5s ease;
   background-size: contain;
+}
+.form-avaliacao p label > span .wpcf7-checkbox .wpcf7-list-item.certo {
+  border-color: #2ECC71;
+  color: #2ECC71;
+}
+.form-avaliacao p label > span .wpcf7-checkbox .wpcf7-list-item.errado {
+  border-color: #FA4A38;
+  color: #FA4A38;
 }
 .form-avaliacao p label > span .wpcf7-checkbox .wpcf7-list-item.ativo {
   border-width: 3px;
@@ -769,6 +826,7 @@ button:focus, button:active {
 }
 .form-avaliacao .botao-parte-01 p button, .form-avaliacao .botao-parte-01 p input, .form-avaliacao .botao-parte-02 p button, .form-avaliacao .botao-parte-02 p input {
   border: unset;
+  opacity: 1;
 }
 .form-avaliacao .botao-parte-02 {
   display: flex;

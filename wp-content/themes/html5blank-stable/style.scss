@@ -491,7 +491,7 @@ button{
 					width: vw(398);
 					max-width: 100%;
 					height: vw(59);
-					padding: 0 vw(25);
+					padding: 0 vw(31) 0 vw(25);
 					background-color: transparent;
 					border: 1px solid #638796;
 					border-radius: 10px;
@@ -499,14 +499,41 @@ button{
 					font-size: vw(20);
 					line-height: em(20, 20);
 					font-weight: bold;
+					transition: all 0.5s ease;
+					outline: 0;
 					&::placeholder{
 						color: rgba(#638796, 0.5);
+						transition: all 0.5s ease;
 					}
 				}
 				&[type="checkbox"]{
 					position: absolute;
 					opacity: 0;
 					visibility: hidden;
+				}
+			}
+			input{
+				background-position-y: center;
+				background-position-x: 99%;
+				background-repeat: no-repeat;
+				appearance: textfield;
+				&.certo{
+					border-color: #2ECC71;
+					color: #2ECC71;
+					background-position-x: 97%;
+					background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/check.svg);
+					&::placeholder{
+						color: rgba(#2ECC71, 0.5);
+					}
+				}
+				&.errado{
+					border-color: #FA4A38;
+					color: #FA4A38;
+					background-position-x: 97%;
+					background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/delete_cross.svg);
+					&::placeholder{
+						color: rgba(#FA4A38, 0.5);
+					}
 				}
 			}
 			select{
@@ -517,6 +544,10 @@ button{
 				background-position-x: 97%;
 				&:focus{
 					background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/seta-cima.svg);
+				}
+				&.certo{
+					border-color: #2ECC71;
+					color: #2ECC71;
 				}
 			}
 			&:first-child{
@@ -578,6 +609,14 @@ button{
 							z-index: 1;
 							transition: all 0.5s ease;
 							background-size: contain;
+						}
+						&.certo{
+							border-color: #2ECC71;
+							color: #2ECC71;
+						}
+						&.errado{
+							border-color: #FA4A38;
+							color: #FA4A38;
 						}
 						&.ativo{
 							border-width: 3px;
@@ -825,6 +864,7 @@ button{
 			justify-content: center;
 			button, input{
 				border: unset;
+				opacity: 1;
 			}
 		}
 	}
