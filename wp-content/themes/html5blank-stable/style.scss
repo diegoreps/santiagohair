@@ -109,6 +109,13 @@ b, strong{
 			margin-right: 5px;
 		}
 	}
+	&.white{
+		p{
+			&::before{
+				background-color: #fff;
+			}
+		}
+	}
 }
 
 .linha-esquerda-banner{
@@ -154,6 +161,10 @@ b, strong{
 }
 
 .sombra{
+	box-shadow: 0px 1px 20px #0000001F;
+}
+
+.sombra-coluna > .elementor-widget-wrap {
 	box-shadow: 0px 1px 20px #0000001F;
 }
 
@@ -521,7 +532,7 @@ button{
 					border-color: #2ECC71;
 					color: #2ECC71;
 					background-position-x: 97%;
-					background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/check.svg);
+					background-image: url(https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/07/check.svg);
 					&::placeholder{
 						color: rgba(#2ECC71, 0.5);
 					}
@@ -530,7 +541,7 @@ button{
 					border-color: #FA4A38;
 					color: #FA4A38;
 					background-position-x: 97%;
-					background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/delete_cross.svg);
+					background-image: url(https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/07/delete_cross.svg);
 					&::placeholder{
 						color: rgba(#FA4A38, 0.5);
 					}
@@ -538,12 +549,12 @@ button{
 			}
 			select{
 				appearance: none;
-				background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/seta-baixo.svg);
+				background-image: url(https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/07/seta-baixo.svg);
 				background-repeat: no-repeat;
 				background-position-y: center;
 				background-position-x: 97%;
 				&:focus{
-					background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/seta-cima.svg);
+					background-image: url(https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/07/seta-cima.svg);
 				}
 				&.certo{
 					border-color: #2ECC71;
@@ -601,7 +612,7 @@ button{
 							position: absolute;
 							top: vw(-15.5);
 							right: vw(-15.5);
-							background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/Grupo-121.svg);
+							background-image: url(https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/07/Grupo-121.svg);
 							background-position: center;
 							background-repeat: no-repeat;
 							opacity: 0;
@@ -779,7 +790,7 @@ button{
 						position: absolute;
 						top: vw(-15.5);
 						right: vw(15.5);
-						background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/Grupo-121.svg);
+						background-image: url(https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/07/Grupo-121.svg);
 						background-position: center;
 						background-repeat: no-repeat;
 						opacity: 0;
@@ -803,49 +814,49 @@ button{
 					}
 					&:nth-child(1){
 						label{
-							background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/grau01.svg);
+							background-image: url(https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/07/grau01.svg);
 							
 						}
 					}
 					&:nth-child(2){
 						label{
-							background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/grau02.svg);
+							background-image: url(https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/07/grau02.svg);
 							
 						}
 					}
 					&:nth-child(3){
 						label{
-							background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/grau03.svg);
+							background-image: url(https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/07/grau03.svg);
 							
 						}
 					}
 					&:nth-child(4){
 						label{
-							background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/grau04.svg);
+							background-image: url(https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/07/grau04.svg);
 							
 						}
 					}
 					&:nth-child(5){
 						label{
-							background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/grau05.svg);
+							background-image: url(https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/07/grau05.svg);
 							
 						}
 					}
 					&:nth-child(6){
 						label{
-							background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/grau06.svg);
+							background-image: url(https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/07/grau06.svg);
 							
 						}
 					}
 					&:nth-child(7){
 						label{
-							background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/grau07.svg);
+							background-image: url(https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/07/grau07.svg);
 							
 						}
 					}
 					&:nth-child(8){
 						label{
-							background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/grau08.svg);
+							background-image: url(https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/07/grau08.svg);
 							
 						}
 					}
@@ -965,7 +976,7 @@ button{
 			&.correto{
 				color: #93C06C;
 				&::after{
-					content: url(http://localhost/santiago/wp-content/uploads/2022/07/Grupo-112.svg);
+					content: url(https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/07/Grupo-112.svg);
 					background-color: #D0DAE1;
 					border-color: #93C06C;
 				}
@@ -987,6 +998,46 @@ button{
 			}
 		}
 	}
+}
+
+.scale{
+	.elementor-widget-wrap{
+		transition: all 0.5s ease !important;
+		transform: scale(1.0);
+		cursor: pointer;
+		&:hover{
+			transform: scale(1.05);
+			box-shadow: 0px 1px 20px 0px rgba(0,0,0,0.5);
+			z-index: 2;
+		}
+	}
+}
+
+#hover-box{
+	.elementor-widget-wrap{
+		transition: all 1s ease !important;
+		cursor: pointer;
+		img, p{
+			transition: all 0.5s ease;
+		}
+		&:hover{
+			background-color: #638796;
+			box-shadow: 8px 8px 6px 0px rgba(0, 0, 0, 0.16);
+			img{
+				filter: brightness(0) invert(1);
+			}
+			p{
+				color: #fff;
+			}
+		}
+	}
+}
+
+.padding-vw{
+	.elementor-widget-container{
+		padding: vw(70) vw(40) vw(90) vw(40);
+	}
+	
 }
 
 @media only screen and (max-width: 1025px) {

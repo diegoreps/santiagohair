@@ -132,7 +132,7 @@ class Permalink_Manager_URI_Functions_Post extends Permalink_Manager_Class {
 	/**
 	* Get the active URI
 	*/
-	public static function get_post_uri($post_id, $native_uri = false, $is_draft = false) {
+	public static function get_post_uri($post_id, $native_uri = false, $no_fallback = false) {
 		global $permalink_manager_uris;
 
 		// Check if input is post object
@@ -140,7 +140,7 @@ class Permalink_Manager_URI_Functions_Post extends Permalink_Manager_Class {
 
 		if(!empty($permalink_manager_uris[$post_id])) {
 			$final_uri = $permalink_manager_uris[$post_id];
-		} else if(!$is_draft) {
+		} else if(!$no_fallback) {
 			$final_uri = self::get_default_post_uri($post_id, $native_uri);
 		} else {
 			$final_uri = '';

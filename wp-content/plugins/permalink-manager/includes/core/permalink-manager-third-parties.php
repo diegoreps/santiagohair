@@ -911,8 +911,6 @@ class Permalink_Manager_Third_Parties extends Permalink_Manager_Class {
 	}
 
 	function wpai_api_import_function($importData, $parsedData) {
-		global $permalink_manager_uris;
-
 		// Check if the array with $parsedData is not empty
 		if(empty($parsedData) || empty($importData['post_type'])) { return; }
 
@@ -925,17 +923,33 @@ class Permalink_Manager_Third_Parties extends Permalink_Manager_Class {
 
 		// Get the parsed custom URI
 		$index = (isset($importData['i'])) ? $importData['i'] : false;
-		$pid = (!empty($importData['pid'])) ? $importData['pid'] : false;
-
-		// Prepend "tax-" prefix if needed
-		$pid = (!empty($is_term) && !empty($pid)) ? "tax-{$pid}" : $pid;
+		$pid = (!empty($importData['pid'])) ? (int) $importData['pid'] : false;
 
 		if(isset($index) && !empty($pid) && !empty($parsedData['custom_uri'][$index])) {
-			$custom_uri = Permalink_Manager_Helper_Functions::sanitize_title($parsedData['custom_uri'][$index]);
+			$new_uri = Permalink_Manager_Helper_Functions::sanitize_title($parsedData['custom_uri'][$index]);
 
-			if(!empty($custom_uri)) {
-				$permalink_manager_uris[$pid] = $custom_uri;
-				update_option('permalink-manager-uris', $permalink_manager_uris);
+			if(!empty($new_uri)) {
+				if(!empty($is_term)) {
+					$default_uri = Permalink_Manager_URI_Functions_Tax::get_default_term_uri($pid);
+					$native_uri = Permalink_Manager_URI_Functions_Tax::get_default_term_uri($pid, true);
+					$custom_uri = Permalink_Manager_URI_Functions_Tax::get_term_uri($pid, false, true);
+					$old_uri = (!empty($custom_uri)) ? $custom_uri : $native_uri;
+
+					if($new_uri !== $old_uri) {
+						Permalink_Manager_URI_Functions::save_single_uri($pid, $new_uri, true, true);
+						do_action('permalink_manager_updated_term_uri', $pid, $new_uri, $old_uri, $native_uri, $default_uri, $single_update = true, $uri_saved = true);
+					}
+				} else {
+					$default_uri = Permalink_Manager_URI_Functions_Post::get_default_post_uri($pid);
+					$native_uri = Permalink_Manager_URI_Functions_Post::get_default_post_uri($pid, true);
+					$custom_uri = Permalink_Manager_URI_Functions_Post::get_post_uri($pid, false, true);
+					$old_uri = (!empty($custom_uri)) ? $custom_uri : $native_uri;
+
+					if($new_uri !== $old_uri) {
+						Permalink_Manager_URI_Functions::save_single_uri($pid, $new_uri, false, true);
+						do_action('permalink_manager_updated_post_uri', $pid, $new_uri, $old_uri, $native_uri, $default_uri, $single_update = true, $uri_saved = true);
+					}
+				}
 			}
 		}
 	}

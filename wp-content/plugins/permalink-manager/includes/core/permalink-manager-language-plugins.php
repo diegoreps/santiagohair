@@ -382,16 +382,8 @@ class Permalink_Manager_Language_Plugins extends Permalink_Manager_Class {
 					$domains = $sitepress_settings['language_domains'];
 				}
 
-				if(!empty($element)) {
-					$is_term = (!empty($element->term_taxonomy_id)) ? true : false;
-					$element_id = ($is_term) ? "tax-{$element->term_taxonomy_id}" : $element->ID;
-
-					// Filter only custom permalinks
-					if(empty($permalink_manager_uris[$element_id]) || empty($domains)) { return $base; }
-				}
-
 				// Replace the domain name
-				if(!empty($domains[$language_code])) {
+				if(!empty($domains) && !empty($domains[$language_code])) {
 					$base = trim($domains[$language_code], "/");
 
 					// Append URL scheme

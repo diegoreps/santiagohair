@@ -111,6 +111,9 @@ b, strong {
   vertical-align: middle;
   margin-right: 5px;
 }
+.linha-esquerda.white p::before {
+  background-color: #fff;
+}
 
 .linha-esquerda-banner::before {
   content: "";
@@ -149,6 +152,10 @@ b, strong {
 }
 
 .sombra {
+  box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.1215686275);
+}
+
+.sombra-coluna > .elementor-widget-wrap {
   box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.1215686275);
 }
 
@@ -507,7 +514,7 @@ button:focus, button:active {
   border-color: #2ECC71;
   color: #2ECC71;
   background-position-x: 97%;
-  background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/check.svg);
+  background-image: url(https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/07/check.svg);
 }
 .form-avaliacao p span input.certo::-moz-placeholder {
   color: rgba(46, 204, 113, 0.5);
@@ -522,7 +529,7 @@ button:focus, button:active {
   border-color: #FA4A38;
   color: #FA4A38;
   background-position-x: 97%;
-  background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/delete_cross.svg);
+  background-image: url(https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/07/delete_cross.svg);
 }
 .form-avaliacao p span input.errado::-moz-placeholder {
   color: rgba(250, 74, 56, 0.5);
@@ -537,13 +544,13 @@ button:focus, button:active {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/seta-baixo.svg);
+  background-image: url(https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/07/seta-baixo.svg);
   background-repeat: no-repeat;
   background-position-y: center;
   background-position-x: 97%;
 }
 .form-avaliacao p span select:focus {
-  background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/seta-cima.svg);
+  background-image: url(https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/07/seta-cima.svg);
 }
 .form-avaliacao p span select.certo {
   border-color: #2ECC71;
@@ -605,7 +612,7 @@ button:focus, button:active {
   position: absolute;
   top: -0.8072916667vw;
   right: -0.8072916667vw;
-  background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/Grupo-121.svg);
+  background-image: url(https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/07/Grupo-121.svg);
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0;
@@ -770,7 +777,7 @@ button:focus, button:active {
   position: absolute;
   top: -0.8072916667vw;
   right: 0.8072916667vw;
-  background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/Grupo-121.svg);
+  background-image: url(https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/07/Grupo-121.svg);
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0;
@@ -792,28 +799,28 @@ button:focus, button:active {
   z-index: 3;
 }
 .form-avaliacao .form-avaliacao-parte-2-nao .wpcf7-form-control-wrap .wpcf7-checkbox .wpcf7-list-item:nth-child(1) label {
-  background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/grau01.svg);
+  background-image: url(https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/07/grau01.svg);
 }
 .form-avaliacao .form-avaliacao-parte-2-nao .wpcf7-form-control-wrap .wpcf7-checkbox .wpcf7-list-item:nth-child(2) label {
-  background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/grau02.svg);
+  background-image: url(https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/07/grau02.svg);
 }
 .form-avaliacao .form-avaliacao-parte-2-nao .wpcf7-form-control-wrap .wpcf7-checkbox .wpcf7-list-item:nth-child(3) label {
-  background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/grau03.svg);
+  background-image: url(https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/07/grau03.svg);
 }
 .form-avaliacao .form-avaliacao-parte-2-nao .wpcf7-form-control-wrap .wpcf7-checkbox .wpcf7-list-item:nth-child(4) label {
-  background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/grau04.svg);
+  background-image: url(https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/07/grau04.svg);
 }
 .form-avaliacao .form-avaliacao-parte-2-nao .wpcf7-form-control-wrap .wpcf7-checkbox .wpcf7-list-item:nth-child(5) label {
-  background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/grau05.svg);
+  background-image: url(https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/07/grau05.svg);
 }
 .form-avaliacao .form-avaliacao-parte-2-nao .wpcf7-form-control-wrap .wpcf7-checkbox .wpcf7-list-item:nth-child(6) label {
-  background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/grau06.svg);
+  background-image: url(https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/07/grau06.svg);
 }
 .form-avaliacao .form-avaliacao-parte-2-nao .wpcf7-form-control-wrap .wpcf7-checkbox .wpcf7-list-item:nth-child(7) label {
-  background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/grau07.svg);
+  background-image: url(https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/07/grau07.svg);
 }
 .form-avaliacao .form-avaliacao-parte-2-nao .wpcf7-form-control-wrap .wpcf7-checkbox .wpcf7-list-item:nth-child(8) label {
-  background-image: url(http://localhost/santiago/wp-content/uploads/2022/07/grau08.svg);
+  background-image: url(https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/07/grau08.svg);
 }
 .form-avaliacao .botao-parte-01, .form-avaliacao .botao-parte-02 {
   display: block;
@@ -925,7 +932,7 @@ button:focus, button:active {
   color: #93C06C;
 }
 .etapa span.parte-01.correto::after {
-  content: url(http://localhost/santiago/wp-content/uploads/2022/07/Grupo-112.svg);
+  content: url(https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/07/Grupo-112.svg);
   background-color: #D0DAE1;
   border-color: #93C06C;
 }
@@ -945,26 +952,55 @@ button:focus, button:active {
   color: #D0DAE1;
 }
 
+.scale .elementor-widget-wrap {
+  transition: all 0.5s ease !important;
+  transform: scale(1);
+  cursor: pointer;
+}
+.scale .elementor-widget-wrap:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+#hover-box .elementor-widget-wrap {
+  transition: all 1s ease !important;
+  cursor: pointer;
+}
+#hover-box .elementor-widget-wrap img, #hover-box .elementor-widget-wrap p {
+  transition: all 0.5s ease;
+}
+#hover-box .elementor-widget-wrap:hover {
+  background-color: #638796;
+  box-shadow: 8px 8px 6px 0px rgba(0, 0, 0, 0.16);
+}
+#hover-box .elementor-widget-wrap:hover img {
+  filter: brightness(0) invert(1);
+}
+#hover-box .elementor-widget-wrap:hover p {
+  color: #fff;
+}
+
+.padding-vw .elementor-widget-container {
+  padding: 3.6458333333vw 2.0833333333vw 4.6875vw 2.0833333333vw;
+}
+
 @media only screen and (max-width: 1025px) {
   ul.hfe-nav-menu {
     box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.1215686275);
   }
-
   .linha-esquerda p::before {
     width: 8px;
     height: 1.5px;
   }
-
   .trabalho-icone {
     width: 50px;
     height: 50px;
     padding: 0;
   }
-
   .trabalho-icone {
     padding: 10px;
   }
-
   #faq .elementor-accordion-item .elementor-tab-title {
     background-position-y: 10px;
     background-size: 40px;
@@ -977,7 +1013,6 @@ button:focus, button:active {
     width: 20px;
     height: 20px;
   }
-
   .form-avaliacao {
     width: 100%;
     padding-left: 0;
@@ -1015,7 +1050,7 @@ button:focus, button:active {
     margin-bottom: 20px;
   }
   .form-avaliacao p label > span .wpcf7-checkbox .wpcf7-list-item {
-    height: 40px;
+    height: auto;
     margin: 0 10px 10px 0;
   }
   .form-avaliacao p label > span .wpcf7-checkbox .wpcf7-list-item label {
@@ -1140,20 +1175,17 @@ button:focus, button:active {
     width: 4px;
     height: 1px;
   }
-
   .trabalho-icone {
     border-radius: 10px;
     width: 40px;
     height: 40px;
   }
-
   #faq .elementor-accordion-item .elementor-tab-title {
     background-position-y: 17px;
   }
   #faq .elementor-accordion-item .elementor-tab-title .elementor-accordion-icon {
     top: 23px;
   }
-
   .form-avaliacao p span input:not([type=submit], [type=checkbox], [type=file]), .form-avaliacao p span select:not([type=submit], [type=checkbox], [type=file]) {
     font-size: 10px;
   }
