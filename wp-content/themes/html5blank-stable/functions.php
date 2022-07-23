@@ -413,6 +413,46 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
     return '<h2>' . $content . '</h2>';
 }
 
+function create_post_type_ebooks(){
+    register_post_type('ebooks', 
+        array(
+        'labels' => array(
+            'name' => __('E-books', 'ebooks'), 
+            'singular_name' => __('E-book', 'ebooks'),
+            'add_new' => __('Adicionar Item', 'ebooks'),
+            'add_new_item' => __('Adicionar um novo Item', 'ebooks'),
+            'edit' => __('Editar', 'ebooks'),
+            'edit_item' => __('Editar Item', 'ebooks'),
+            'new_item' => __('Novo Item em Branco', 'ebooks'),
+            'view' => __('Visualizar Itens', 'ebooks'),
+            'view_item' => __('Visualizar Itens', 'ebooks'),
+            'search_items' => __('Procurar um Item', 'ebooks'),
+            'not_found' => __('Nenhum Item encontrado', 'ebooks'),
+            'not_found_in_trash' => __('Nenhum Item na lixeira', 'ebooks')
+        ),
+        'public' => true,
+        'hierarchical' => true, 
+        'has_archive' => false,
+        'can_export' => true,
+        'supports' =>   array(  'title',
+                                'editor', 
+                                'thumbnail',
+                                'revisions'
+        ), 
+    ));
+}
+add_action('init', 'create_post_type_ebooks');
+
+add_filter('get_sample_permalink_html', 'my_hide_permalinks_ebooks', 10, 5);
+
+function my_hide_permalinks_ebooks($return, $post_id, $new_title, $new_slug, $post)
+{
+    if($post->post_type == 'ebooks') {
+        return '';
+    }
+    return $return;
+}
+
 
 function create_post_type_tecnicas(){
     register_post_type('tecnicas', 

@@ -109,10 +109,17 @@ b, strong {
   background-color: #638796;
   border-radius: 10px;
   vertical-align: middle;
-  margin-right: 5px;
+  margin: 0 5px 0 0;
 }
 .linha-esquerda.white p::before {
   background-color: #fff;
+}
+.linha-esquerda.flex p {
+  display: flex;
+  align-items: flex-start;
+}
+.linha-esquerda.flex p::before {
+  margin: 10px 5px 0 0;
 }
 
 .linha-esquerda-banner::before {
@@ -992,6 +999,12 @@ button:focus, button:active {
   .linha-esquerda p::before {
     width: 8px;
     height: 1.5px;
+  }
+  .linha-esquerda.flex p {
+    display: block;
+  }
+  .linha-esquerda.flex p::before {
+    margin-top: 0;
   }
   .trabalho-icone {
     width: 50px;

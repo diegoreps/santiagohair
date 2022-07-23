@@ -1,0 +1,136 @@
+.ebooks-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 4.6875vw 1.3541666667vw;
+  margin-top: 3.4375vw;
+}
+.ebooks-grid .ebook-post {
+  display: block;
+  background-color: #EFF1F5;
+  padding: 0 3.5416666667vw 3.0208333333vw 3.5416666667vw;
+  min-height: 25.0520833333vw;
+  position: relative;
+}
+.ebooks-grid .ebook-post .ebook-img {
+  display: block;
+  width: 100%;
+  margin-top: -3.4375vw;
+}
+.ebooks-grid .ebook-post .ebook-img img {
+  display: block;
+  width: 15.625vw;
+  height: 15.625vw;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  margin: 0 auto;
+}
+.ebooks-grid .ebook-post p {
+  display: block;
+  width: 13.5416666667vw;
+  max-width: 100%;
+  color: #000;
+  margin: 0 auto 0.78125vw auto;
+  text-align: center;
+}
+.ebooks-grid .ebook-post p.tipo {
+  margin: -1.3020833333vw auto 0.3072916667vw auto;
+}
+.ebooks-grid .ebook-post p.tipo b {
+  color: #638796;
+  font-weight: bold;
+}
+.ebooks-grid .ebook-post a {
+  display: block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  position: absolute;
+  bottom: 3.0208333333vw;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 100%;
+  font-size: 1.25vw;
+  font-weight: bold;
+  background-color: #638796;
+  border-radius: 50px 50px 50px 50px;
+  box-shadow: 0px 3px 6px 0px rgba(0, 56, 58, 0.3607843137);
+  padding: 0.9895833333vw 2.34375vw;
+  background-image: linear-gradient(259deg, #638796 50%, #32444B 85%);
+  color: #fff;
+  transition: all 0.5s ease;
+  flex: 1 1 auto;
+  background-size: 200% auto;
+  margin: 0 auto;
+}
+.ebooks-grid .ebook-post a img {
+  vertical-align: middle;
+  margin-left: 0.5208333333vw;
+}
+.ebooks-grid .ebook-post a:hover {
+  background-position: 50% center;
+}
+
+@media only screen and (max-width: 1024px) {
+  .ebooks-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 90px 20px;
+    margin-top: 66px;
+  }
+  .ebooks-grid .ebook-post {
+    padding: 0 30px 58px 30px;
+    min-height: auto;
+  }
+  .ebooks-grid .ebook-post .ebook-img {
+    margin-top: -66px;
+  }
+  .ebooks-grid .ebook-post .ebook-img img {
+    width: 300px;
+    height: 300px;
+  }
+  .ebooks-grid .ebook-post p {
+    width: 100%;
+    margin: 0 auto 15px auto;
+  }
+  .ebooks-grid .ebook-post p.tipo {
+    margin: -25px auto 5.9px auto;
+  }
+  .ebooks-grid .ebook-post a {
+    position: unset;
+    bottom: unset;
+    left: unset;
+    transform: unset;
+    font-size: 20px;
+    padding: 19px 45px;
+  }
+  .ebooks-grid .ebook-post a img {
+    margin-left: 10px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .ebooks-grid {
+    grid-template-columns: 1fr;
+    gap: 90px 0;
+  }
+  .ebooks-grid .ebook-post {
+    padding: 0 20px 30px 20px;
+  }
+  .ebooks-grid .ebook-post .ebook-img img {
+    width: 250px;
+    height: 250px;
+  }
+  .ebooks-grid .ebook-post p.tipo {
+    margin: -20px auto 5.9px auto;
+  }
+  .ebooks-grid .ebook-post a {
+    font-size: 10px;
+    padding: 15px 32px;
+  }
+  .ebooks-grid .ebook-post a img {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+  }
+}/*# sourceMappingURL=ebooks_list.css.map */

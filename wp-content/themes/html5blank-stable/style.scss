@@ -106,13 +106,22 @@ b, strong{
 			background-color: #638796;
 			border-radius: 10px;
 			vertical-align: middle;
-			margin-right: 5px;
+			margin: 0 5px 0 0;
 		}
 	}
 	&.white{
 		p{
 			&::before{
 				background-color: #fff;
+			}
+		}
+	}
+	&.flex{
+		p{
+			display: flex;
+			align-items: flex-start;
+			&::before{
+				margin: 10px 5px 0 0;
 			}
 		}
 	}
@@ -1051,6 +1060,14 @@ button{
 			&::before{
 				width: 8px;
 				height: 1.5px;
+			}
+		}
+		&.flex{
+			p{
+				display: block;
+				&::before{
+					margin-top: 0;
+				}
 			}
 		}
 	}
