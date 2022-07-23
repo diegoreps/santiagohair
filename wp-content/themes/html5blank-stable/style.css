@@ -178,14 +178,14 @@ b, strong {
   background-position: 100% center;
 }
 
-button {
+button, input[type=submit] {
   transition: all 0.5s ease;
   background-size: 200% auto;
 }
-button:hover {
+button:hover, input[type=submit]:hover {
   background-position: 50% center;
 }
-button:focus, button:active {
+button:focus, button:active, input[type=submit]:focus, input[type=submit]:active {
   background-position: 100% center;
 }
 
@@ -992,6 +992,52 @@ button:focus, button:active {
   padding: 3.6458333333vw 2.0833333333vw 4.6875vw 2.0833333333vw;
 }
 
+#contato input:not([type=submit])::-moz-placeholder, #contato textarea:not([type=submit])::-moz-placeholder {
+  color: #B2B5B6;
+}
+
+#contato input:not([type=submit]):-ms-input-placeholder, #contato textarea:not([type=submit]):-ms-input-placeholder {
+  color: #B2B5B6;
+}
+
+#contato input:not([type=submit])::placeholder, #contato textarea:not([type=submit])::placeholder {
+  color: #B2B5B6;
+}
+#contato .wpcf7mf-mask, #contato select {
+  width: 100%;
+  padding: 17px 20px 17px 20px;
+  border-radius: 10px 10px 10px 10px;
+  background-color: #FFFFFF;
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: #B2B5B6;
+  font-weight: bold;
+}
+#contato .wpcf7mf-mask {
+  color: #2D3643;
+}
+#contato select {
+  color: #B2B5B6;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url(https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/07/seta-baixo.svg);
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 97%;
+}
+#contato select:focus {
+  background-image: url(https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/07/seta-cima.svg);
+}
+
+.flex-pin p {
+  display: flex;
+  align-items: flex-start;
+}
+.flex-pin p img {
+  margin: 5px 10px 0 0;
+}
+
 @media only screen and (max-width: 1025px) {
   ul.hfe-nav-menu {
     box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.1215686275);
@@ -1182,6 +1228,10 @@ button:focus, button:active {
     font-size: 14px;
     margin-bottom: 20px;
   }
+  #contato .wpcf7mf-mask, #contato select {
+    padding: 15px 20px 15px 20px;
+    font-size: 16px;
+  }
 }
 @media only screen and (max-width: 768px) {
   .linha-esquerda p::before {
@@ -1214,5 +1264,9 @@ button:focus, button:active {
   .form-avaliacao .botao-parte-02 p #parte-1 {
     font-size: 10px;
     margin-bottom: 20px;
+  }
+  #contato .wpcf7mf-mask, #contato select {
+    padding: 10px 20px 10px 20px;
+    font-size: 10px;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -191,7 +191,7 @@ b, strong{
 	}
 }
 
-button{
+button, input[type=submit]{
 		transition: all 0.5s ease; 
 		background-size: 200% auto;
 		&:hover{
@@ -1049,6 +1049,51 @@ button{
 	
 }
 
+#contato{
+	input, textarea{
+		&:not([type=submit]){
+			&::placeholder{
+				color: #B2B5B6;
+			}
+		}
+	}
+	.wpcf7mf-mask, select{
+		width: 100%;
+		padding: 17px 20px 17px 20px;
+		border-radius: 10px 10px 10px 10px;
+		background-color: #FFFFFF;
+		border-style: solid;
+		border-width: 1px 1px 1px 1px;
+		border-color: #B2B5B6;
+		font-weight: bold;
+	}
+	.wpcf7mf-mask{
+		color: #2D3643;
+	}
+	select{
+		color: #B2B5B6;
+		appearance: none;
+		background-image: url(https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/07/seta-baixo.svg);
+		background-repeat: no-repeat;
+		background-position-y: center;
+		background-position-x: 97%;
+		&:focus{
+			background-image: url(https://clinicasantiagohair.com.br/new/wp-content/uploads/2022/07/seta-cima.svg);
+		}
+	}
+}
+
+.flex-pin{
+	p{
+		display: flex;
+		align-items: flex-start;
+		img{
+			margin: 5px 10px 0 0;
+		}
+
+	}
+}
+
 @media only screen and (max-width: 1025px) {
 
 	ul.hfe-nav-menu{
@@ -1277,6 +1322,13 @@ button{
 	
 	
 	}
+
+	#contato{
+		.wpcf7mf-mask, select{
+			padding: 15px 20px 15px 20px;
+			font-size: 16px;
+		}
+	}
 	
 }
 
@@ -1354,5 +1406,12 @@ button{
 		}
 	
 	
+	}
+
+	#contato{
+		.wpcf7mf-mask, select{
+			padding: 10px 20px 10px 20px;
+			font-size: 10px;
+		}
 	}
 }
