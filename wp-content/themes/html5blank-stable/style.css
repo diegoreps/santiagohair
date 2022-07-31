@@ -992,6 +992,13 @@ button:focus, button:active, input[type=submit]:focus, input[type=submit]:active
   padding: 3.6458333333vw 2.0833333333vw 4.6875vw 2.0833333333vw;
 }
 
+.padding-vw-barba b, .padding-vw-barba strong {
+  color: #2D3643;
+}
+.padding-vw-barba .elementor-widget-container {
+  padding: 2.0833333333vw 1.5625vw 2.0833333333vw 1.5625vw;
+}
+
 #contato input:not([type=submit])::-moz-placeholder, #contato textarea:not([type=submit])::-moz-placeholder {
   color: #B2B5B6;
 }
@@ -1036,6 +1043,25 @@ button:focus, button:active, input[type=submit]:focus, input[type=submit]:active
 }
 .flex-pin p img {
   margin: 5px 10px 0 0;
+}
+
+.check-list ul li {
+  display: block;
+  padding-left: 1.09375vw;
+  position: relative;
+}
+.check-list ul li::before {
+  display: flex;
+  content: url(http://localhost/santiago/wp-content/uploads/2022/07/Icon-awesome-check-circle.svg);
+  position: absolute;
+  left: 0;
+  top: 0.2604166667vw;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+  -o-object-position: center;
+     object-position: center;
+  width: 0.8333333333vw;
+  height: 0.8333333333vw;
 }
 
 @media only screen and (max-width: 1025px) {
@@ -1232,6 +1258,14 @@ button:focus, button:active, input[type=submit]:focus, input[type=submit]:active
     padding: 15px 20px 15px 20px;
     font-size: 16px;
   }
+  .check-list ul li {
+    padding-left: 20px;
+  }
+  .check-list ul li::before {
+    width: 16px;
+    height: 16px;
+    top: 0;
+  }
 }
 @media only screen and (max-width: 768px) {
   .linha-esquerda p::before {
@@ -1268,5 +1302,13 @@ button:focus, button:active, input[type=submit]:focus, input[type=submit]:active
   #contato .wpcf7mf-mask, #contato select {
     padding: 10px 20px 10px 20px;
     font-size: 10px;
+  }
+  .check-list ul li {
+    padding-left: 15px;
+  }
+  .check-list ul li::before {
+    width: 10px;
+    height: 10px;
+    top: 2px;
   }
 }/*# sourceMappingURL=style.css.map */

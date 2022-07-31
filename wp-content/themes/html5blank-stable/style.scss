@@ -1049,6 +1049,16 @@ button, input[type=submit]{
 	
 }
 
+.padding-vw-barba{
+	b, strong{
+		color: #2D3643;
+	}
+	.elementor-widget-container{
+		padding: vw(40) vw(30) vw(40) vw(30);
+	}
+	
+}
+
 #contato{
 	input, textarea{
 		&:not([type=submit]){
@@ -1091,6 +1101,27 @@ button, input[type=submit]{
 			margin: 5px 10px 0 0;
 		}
 
+	}
+}
+
+.check-list{
+	ul{
+		li{
+			display: block;
+			padding-left: vw(21);
+			position: relative;
+			&::before{
+				display: flex;
+				content: url(http://localhost/santiago/wp-content/uploads/2022/07/Icon-awesome-check-circle.svg);
+				position: absolute;
+				left: 0;
+				top: vw(5);
+				object-fit: scale-down;
+				object-position: center;
+				width: vw(16);
+				height: vw(16);
+			}
+		}
 	}
 }
 
@@ -1329,6 +1360,19 @@ button, input[type=submit]{
 			font-size: 16px;
 		}
 	}
+
+	.check-list{
+		ul{
+			li{
+				padding-left: 20px;
+				&::before{
+					width: 16px;
+					height: 16px;
+					top: 0;
+				}
+			}
+		}
+	}
 	
 }
 
@@ -1412,6 +1456,19 @@ button, input[type=submit]{
 		.wpcf7mf-mask, select{
 			padding: 10px 20px 10px 20px;
 			font-size: 10px;
+		}
+	}
+
+	.check-list{
+		ul{
+			li{
+				padding-left: 15px;
+				&::before{
+					width: 10px;
+					height: 10px;
+					top: 2px;
+				}
+			}
 		}
 	}
 }

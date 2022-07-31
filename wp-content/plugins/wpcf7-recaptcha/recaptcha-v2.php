@@ -132,7 +132,7 @@ function iqfix_wpcf7_recaptcha_form_tag_handler( $tag ) {
 	$html = sprintf( '<span %1$s></span>', wpcf7_format_atts( $atts ) );
 	$html .= iqfix_wpcf7_recaptcha_noscript(
 		array( 'sitekey' => $atts['data-sitekey'] ) );
-	$html = sprintf( '<span class="wpcf7-form-control-wrap recaptcha">%s</span>', $html );
+	$html = sprintf( '<span class="wpcf7-form-control-wrap recaptcha" data-name="recaptcha">%s</span>', $html );
 
 	return $html;
 
