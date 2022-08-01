@@ -1064,6 +1064,152 @@ button:focus, button:active, input[type=submit]:focus, input[type=submit]:active
   height: 0.8333333333vw;
 }
 
+.sessao-tecnicas-interna {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+.sessao-tecnicas-interna .sessao-tecnicas-menu-interna {
+  display: block;
+  min-width: 16.7708333333vw;
+  max-width: 16.7708333333vw;
+  width: 100%;
+  padding-right: 3.2291666667vw;
+  cursor: pointer;
+}
+.sessao-tecnicas-interna .sessao-tecnicas-menu-interna .sessao-tecnicas-menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  min-height: 7.2916666667vw;
+  height: 100%;
+  padding: 0.78125vw 1.0416666667vw;
+  background-color: transparent;
+  box-sizing: border-box;
+  margin-bottom: 1.5625vw;
+  position: relative;
+  transition: all 0.5s ease;
+}
+.sessao-tecnicas-interna .sessao-tecnicas-menu-interna .sessao-tecnicas-menu-item img {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 3.3854166667vw;
+  margin-bottom: 0.5208333333vw;
+  margin-right: auto;
+}
+.sessao-tecnicas-interna .sessao-tecnicas-menu-interna .sessao-tecnicas-menu-item span {
+  display: block;
+  width: 100%;
+  color: #2D3643;
+  transition: all 0.5s ease;
+}
+.sessao-tecnicas-interna .sessao-tecnicas-menu-interna .sessao-tecnicas-menu-item.sessao-ativa {
+  visibility: visible;
+  opacity: 1;
+  background-color: #638796;
+  box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.5);
+}
+.sessao-tecnicas-interna .sessao-tecnicas-menu-interna .sessao-tecnicas-menu-item.sessao-ativa span {
+  color: #FFFFFF;
+}
+.sessao-tecnicas-interna .sessao-tecnicas-menu-interna .sessao-tecnicas-menu-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1.5104166667vw;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #707070;
+}
+.sessao-tecnicas-interna .sessao-tecnicas-menu-interna .sessao-tecnicas-menu-item:first-child::after {
+  width: calc(100% - 2.0833333333vw);
+}
+.sessao-tecnicas-interna .sessao-tecnicas-menu-interna .sessao-tecnicas-menu-item:last-child::after {
+  display: none;
+}
+.sessao-tecnicas-interna .sessao-tecnicas-menu-conteudo {
+  position: relative;
+}
+.sessao-tecnicas-interna .sessao-tecnicas-menu-conteudo .sessao-tecnicas-absolute {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sessao-tecnicas-interna .sessao-tecnicas-menu-conteudo .sessao-tecnicas-absolute .sessao-tecnicas-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  transition: all 0.5s ease;
+}
+.sessao-tecnicas-interna .sessao-tecnicas-menu-conteudo .sessao-tecnicas-absolute .sessao-tecnicas-item .sessao-tecnicas-item-imagem {
+  display: block;
+  width: 23.125vw;
+  margin-right: 3.4375vw;
+}
+.sessao-tecnicas-interna .sessao-tecnicas-menu-conteudo .sessao-tecnicas-absolute .sessao-tecnicas-item .sessao-tecnicas-item-imagem img {
+  width: 100%;
+  height: 30vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.sessao-tecnicas-interna .sessao-tecnicas-menu-conteudo .sessao-tecnicas-absolute .sessao-tecnicas-item .sessao-tecnicas-item-texto {
+  display: block;
+  width: 20.7291666667vw;
+  height: auto;
+}
+.sessao-tecnicas-interna .sessao-tecnicas-menu-conteudo .sessao-tecnicas-absolute .sessao-tecnicas-item .sessao-tecnicas-item-texto h4 {
+  display: block;
+  width: 100%;
+  font-size: 1.0416666667vw;
+  color: #2D3643;
+  margin-bottom: 15px;
+  text-align: left;
+  font-weight: bold;
+}
+.sessao-tecnicas-interna .sessao-tecnicas-menu-conteudo .sessao-tecnicas-absolute .sessao-tecnicas-item .sessao-tecnicas-item-texto p {
+  font-size: 1.0416666667vw;
+  line-height: 1.3em;
+  color: #2D3643;
+  margin-bottom: 1.09375vw;
+  text-align: left;
+  font-weight: 400;
+}
+.sessao-tecnicas-interna .sessao-tecnicas-menu-conteudo .sessao-tecnicas-absolute .sessao-tecnicas-item .sessao-tecnicas-item-texto a {
+  display: block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 100%;
+  font-size: 1.25vw;
+  font-weight: bold;
+  background-color: #638796;
+  border-radius: 50px 50px 50px 50px;
+  box-shadow: 0px 3px 6px 0px rgba(0, 56, 58, 0.3607843137);
+  padding: 1.1458333333vw 2.0833333333vw;
+  background-image: linear-gradient(259deg, #638796 50%, #32444B 85%);
+  color: #fff;
+  transition: all 0.5s ease;
+  flex: 1 1 auto;
+  background-size: 200% auto;
+}
+.sessao-tecnicas-interna .sessao-tecnicas-menu-conteudo .sessao-tecnicas-absolute .sessao-tecnicas-item .sessao-tecnicas-item-texto a:hover {
+  background-position: 50% center;
+}
+.sessao-tecnicas-interna .sessao-tecnicas-menu-conteudo .sessao-tecnicas-absolute .sessao-tecnicas-item.sessao-ativa {
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+}
+
 @media only screen and (max-width: 1025px) {
   ul.hfe-nav-menu {
     box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.1215686275);

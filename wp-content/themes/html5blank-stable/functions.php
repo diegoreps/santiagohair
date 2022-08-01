@@ -606,4 +606,101 @@ function sessao_tecnicas($atts) {
 }
 add_shortcode('shortcode_sessao_tecnicas', 'sessao_tecnicas');
 
+function sessao_tecnicas_interna($atts) {
+
+    $id_page = get_the_ID();
+
+    $args = array(
+        'posts_per_page' => -1, 
+        'post_type' => "tecnicas",
+        'post_status' => 'publish',
+        'ignore_sticky_posts'	=> false,
+        'order' => 'DESC',
+        'orderby' => 'date',
+    );
+
+    $tecnicas = new WP_Query( $args );
+
+    if($tecnicas->found_posts > 0){
+        $i = 1;
+    ?>
+        <div class="sessao-tecnicas-interna">
+
+            <div class="sessao-tecnicas-menu-interna">
+
+                <?php while($tecnicas->have_posts()) : $tecnicas->the_post(); ?>
+
+                    <?php if(get_field("link_da_pagina", get_the_ID()) != $id_page){ ?>
+
+                    <div id="tecnica-<?php the_ID(); ?>" class="sessao-tecnicas-menu-item <?php if($i == 1){ echo 'sessao-ativa'; } ?>">
+
+                        <img src="<?php echo the_field("icone_interna", get_the_ID()); ?>" />
+
+                        <span><?php the_title(); ?><span>
+                        
+                    </div>
+
+                <?php } ?>
+
+                <?php $i++; endwhile; ?>
+            </div>
+
+
+            <div class="sessao-tecnicas-menu-conteudo">
+
+                <?php $i = 1; while($tecnicas->have_posts()) : $tecnicas->the_post(); ?>
+                
+
+                    <div class="sessao-tecnicas-absolute">
+
+                        <div class="sessao-tecnicas-item tecnica-<?php the_ID(); ?> <?php if($i == 1){ echo 'sessao-ativa'; } ?>">
+
+                            <div class="sessao-tecnicas-item-imagem">
+
+                                <img src="<?php echo the_field("imagem_interna", get_the_ID()); ?>" />
+
+                            </div>
+
+                            <div class="sessao-tecnicas-item-texto">
+
+                                <h4><?php the_title(); ?></h4>
+
+                                <?php the_content(); ?>
+
+                                <a href="<?php the_permalink(get_field("link_da_pagina", get_the_ID())) ?>">Conheça a técnica</a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                <?php $i++; endwhile; ?>
+
+            </div>
+        </div>
+
+    <?php
+    ?>
+    <script>
+        jQuery( ".sessao-tecnicas-menu-item" ).on( "click", function() {
+
+            id = jQuery(this).attr('id');
+
+            jQuery(".sessao-tecnicas-menu-item").removeClass("sessao-ativa");
+
+            jQuery(".sessao-tecnicas-item").removeClass("sessao-ativa");
+
+            jQuery(this).addClass("sessao-ativa");
+
+            jQuery("."+ id).addClass("sessao-ativa");
+
+        });
+    </script>
+    <?php
+    }
+
+}
+add_shortcode('shortcode_sessao_tecnicas_interna', 'sessao_tecnicas_interna');
+
 ?>
